@@ -20,6 +20,7 @@ export default function Projects() {
       align="center"
       direction="column"
       minH="calc(100vh - 60px)"
+      p={4}
     >
       <Text fontSize="3xl">Projects</Text>
       <Grid

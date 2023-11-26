@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export enum language {
   JS = "JavaScript",
   CSS = "CSS",
@@ -24,4 +26,17 @@ export interface projectProps {
   languages: language[];
   githubLink: string;
   liveLink?: string;
+}
+
+export interface IGalleryImage {
+  image: string;
+  annotation?: string;
+}
+
+export interface passionProps {
+  id: string;
+  title: string;
+  icon: IconType;
+  description: string;
+  images: IGalleryImage[];
 }

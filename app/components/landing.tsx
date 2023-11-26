@@ -3,11 +3,12 @@ import { Box, Flex, Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
 export default function Landing() {
   return (
     <Flex
-      id="landing"
+      id="Landing"
       align="center"
       justify={{ base: "center", md: "space-around" }}
       direction={{ base: "column", md: "row" }}
       minH="calc(100vh - 80px)"
+      p={4}
     >
       <Stack gap="10px">
         <Heading size="xl" color="primary.800">
@@ -18,12 +19,12 @@ export default function Landing() {
         </Heading>
         <Text fontSize={{ base: "sm" }}>
           Welcome to the home of my{" "}
-          <Link color="teal.500" href="#">
-            Passions
+          <Link color="teal.500" href="/#Projects">
+            Projects
           </Link>
           ,{" "}
-          <Link color="teal.500" href="#">
-            Projects
+          <Link color="teal.500" href="/#Passions">
+            Passions
           </Link>
           , and continuous development.
         </Text>
