@@ -2,6 +2,8 @@
 
 import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
+  initialColorMode: "light",
+  useSystemColorMode: true,
   colors: {
     grey: {
       100: "#e3e3e3",

@@ -8,7 +8,6 @@ export default function Landing() {
       justify={{ base: "center", md: "space-around" }}
       direction={{ base: "column", md: "row" }}
       minH="calc(100vh - 80px)"
-      p={4}
     >
       <Stack gap="10px">
         <Heading size="xl" color="primary.800">

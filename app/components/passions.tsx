@@ -1,16 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Flex,
-  Grid,
-  Heading,
-  Icon,
-  Image,
-  Link,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, Icon, Text } from "@chakra-ui/react";
 import { passions } from "../utils/contants";
 import Gallery from "./gallery";
 
@@ -21,15 +11,14 @@ export default function Passions() {
       align="center"
       direction="column"
       minH="calc(100vh - 60px)"
-      p={4}
     >
       <Text fontSize="3xl">Passions</Text>
-      <Flex
-        w={{ base: "100%", md: "80%" }}
-        maxW={{ base: "400px", md: "800px" }}
+      <Grid
+        w={{ base: "100%" }}
+        maxW={{ base: "400px", sm: "700px" }}
         gap={8}
+        templateColumns={"repeat(1, 1fr)"}
         placeItems="center"
-        direction="column"
       >
         {passions.map(({ id, title, icon, description, images }) => {
           return (
@@ -57,7 +46,7 @@ export default function Passions() {
             </Flex>
           );
         })}
-      </Flex>
+      </Grid>
     </Flex>
   );
 }

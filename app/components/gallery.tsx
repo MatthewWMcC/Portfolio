@@ -46,7 +46,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
     <Flex direction="column" w="full" position="relative">
       <AspectRatio>
         <Flex>
-          <Image className="img-cover" src={currentImage.image}></Image>
+          <Image src={currentImage.image} maxH={"100%"}></Image>
           <Flex
             pos="absolute"
             top="50%"
@@ -76,13 +76,14 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
           </Flex>
         </Flex>
       </AspectRatio>
-      {currentImage.annotation && (
+
+      {/* {currentImage.annotation && (
         <Box px={2}>
           <Text fontSize="xs" color="primary.800">
             {currentImage.annotation}
           </Text>
         </Box>
-      )}
+      )} */}
       <Flex gap={1.5} justify="center" pt={1} pb={2}>
         {Array(length)
           .fill(0)

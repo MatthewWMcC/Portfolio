@@ -1,21 +1,31 @@
 "use client";
 
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import {
   Box,
   Collapse,
   Flex,
+  Icon,
   IconButton,
   Image,
   Link,
   Stack,
   Switch,
   Text,
+  useColorMode,
+  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
+import { useMemo } from "react";
+import IconSwitch from "./IconSwitch";
+import { IoMoon, IoSunny } from "react-icons/io5";
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  const isLightMode = useMemo(() => colorMode === "light", [colorMode]);
+
   const links = [
     "Projects",
     "Passions",
@@ -57,9 +67,10 @@ export default function NavBar() {
         py="2"
         backgroundColor="white"
         align="center"
+        bg={useColorModeValue("white", "gray.800")}
       >
         <Flex
-          gap="5px"
+          gap={{ base: 0.5, xl: 1 }}
           flex={{ base: 1 }}
           flexBasis="1"
           display={{ base: "none", lg: "flex" }}
@@ -76,13 +87,17 @@ export default function NavBar() {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={1} flexBasis="1" justify="space-evenly">
+        <Flex>
           <Link _hover={{ bg: "gray.200" }} href="/#" rounded="md" p={0.5}>
             <Image src="./portfolio-logo.png" h="50px" width="50px"></Image>
           </Link>
         </Flex>
         <Flex flex={{ base: 1 }} justify={"flex-end"} flexBasis="1">
-          <Switch id="dark-mode" />
+          <IconSwitch
+            icon={isLightMode ? IoSunny : IoMoon}
+            onChange={toggleColorMode}
+            checked={isLightMode}
+          />
         </Flex>
       </Flex>
       <Collapse in={isOpen} animateOpacity>

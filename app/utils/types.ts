@@ -40,3 +40,9 @@ export interface passionProps {
   description: string;
   images: IGalleryImage[];
 }
+
+export interface iconSwitchProps {
+  onChange: any;
+  icon: IconType;
+  checked: boolean;
+}
