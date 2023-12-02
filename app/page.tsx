@@ -4,6 +4,7 @@ import Landing from "./components/landing";
 import Projects from "./components/projects";
 import Passions from "./components/passions";
 import Divider from "./components/divider";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
         <Projects />
         <Divider />
         <Passions />
+        <Divider />
+        <Contact />
       </Container>
     </>
   );

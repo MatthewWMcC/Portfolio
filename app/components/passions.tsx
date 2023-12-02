@@ -1,21 +1,25 @@
 "use client";
 
-import { Box, Flex, Grid, Icon, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Grid,
+  Icon,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { passions } from "../utils/contants";
 import Gallery from "./gallery";
 
 export default function Passions() {
   return (
-    <Flex
-      id="Passions"
-      align="center"
-      direction="column"
-      minH="calc(100vh - 60px)"
-    >
+    <Flex align="center" direction="column" minH="calc(100vh - 60px)">
+      <Box id="Passions"></Box>
       <Text fontSize="3xl">Passions</Text>
+      <br></br>
       <Grid
         w={{ base: "100%" }}
-        maxW={{ base: "400px", sm: "700px" }}
+        maxW={{ base: "400px", sm: "600px", lg: "800px" }}
         gap={8}
         templateColumns={"repeat(1, 1fr)"}
         placeItems="center"
@@ -27,7 +31,7 @@ export default function Passions() {
               direction="column"
               w="full"
               h="full"
-              bg="gray.100"
+              bg={useColorModeValue("gray.100", "gray.700")}
               rounded="md"
               overflow="hidden"
             >

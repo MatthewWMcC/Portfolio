@@ -12,12 +12,12 @@ import {
   Stack,
   Text,
   AspectRatio,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { projectProps } from "../utils/types";
 import { languageColorMap } from "../utils/contants";
 import { LinkIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
-import NextLink from "next/link";
 
 export default function Project(props: projectProps) {
   const { title, description, image, languages, githubLink, liveLink } = props;
@@ -26,43 +26,35 @@ export default function Project(props: projectProps) {
       direction="column"
       w="full"
       h="full"
-      bg="gray.100"
+      bg={useColorModeValue("gray.100", "gray.700")}
       rounded="md"
       overflow="hidden"
       gap={0}
-      outline="solid 1px"
-      outlineColor="gray.100"
     >
       <AspectRatio ratio={1} w="full">
         <Image className="img-cover" src={image} objectFit="contain"></Image>
       </AspectRatio>
       <Box w="full" p={2} pt={1}>
         <Flex justifyContent="space-between" align="center" pb={1}>
-          <Text fontSize="xl" color="primary.800">
-            {title}
-          </Text>
+          <Text fontSize="xl">{title}</Text>
           <Flex gap={1}>
             {liveLink && (
-              <Link
-                href={liveLink}
-                _hover={{
-                  bg: "gray.200",
-                }}
-                rounded="md"
-                isExternal
-              >
-                <IconButton icon={<LinkIcon />} aria-label="live link" />
+              <Link href={liveLink} rounded="md" isExternal>
+                <IconButton
+                  bg="transparent"
+                  icon={<LinkIcon />}
+                  aria-label="live link"
+                  tabIndex={-1}
+                />
               </Link>
             )}
-            <Link
-              href={githubLink}
-              _hover={{
-                bg: "gray.200",
-              }}
-              rounded="md"
-              isExternal
-            >
-              <IconButton icon={<Icon as={FaGithub} />} aria-label="github" />
+            <Link href={githubLink} rounded="md" isExternal>
+              <IconButton
+                bg="transparent"
+                icon={<Icon as={FaGithub} />}
+                aria-label="github"
+                tabIndex={-1}
+              />
             </Link>
           </Flex>
         </Flex>

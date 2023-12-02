@@ -3,16 +3,11 @@
 import {
   AspectRatio,
   Box,
-  Collapse,
   Flex,
   IconButton,
   Image,
-  Link,
-  Stack,
-  Switch,
-  Text,
+  useColorModeValue,
   useConst,
-  useDisclosure,
 } from "@chakra-ui/react";
 import { IGalleryImage } from "../utils/types";
 import { useMemo, useState } from "react";
@@ -61,6 +56,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
                 rounded={"full"}
                 onClick={decrement}
                 opacity={0.8}
+                bg={useColorModeValue("gray.100", "gray.700")}
               />
             )}
             {index < length - 1 && (
@@ -71,6 +67,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
                 ml="auto"
                 onClick={increment}
                 opacity={0.8}
+                bg={useColorModeValue("gray.100", "gray.700")}
               />
             )}
           </Flex>

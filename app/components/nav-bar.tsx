@@ -42,7 +42,7 @@ export default function NavBar() {
           borderRadius="8px"
           href={`/#${link}`}
           _hover={{
-            bg: "gray.200",
+            bg: useColorModeValue("gray.100", "gray.900"),
           }}
           width="100%"
           textAlign="center"
@@ -88,7 +88,14 @@ export default function NavBar() {
           />
         </Flex>
         <Flex>
-          <Link _hover={{ bg: "gray.200" }} href="/#" rounded="md" p={0.5}>
+          <Link
+            _hover={{
+              bg: useColorModeValue("gray.100", "gray.900"),
+            }}
+            href="/#"
+            rounded="md"
+            p={0.5}
+          >
             <Image src="./portfolio-logo.png" h="50px" width="50px"></Image>
           </Link>
         </Flex>
@@ -102,7 +109,7 @@ export default function NavBar() {
       </Flex>
       <Collapse in={isOpen} animateOpacity>
         <Stack
-          bg={"white"}
+          bg={useColorModeValue("white", "gray.800")}
           p={4}
           display={{ lg: "none" }}
           borderY="1px"

@@ -38,7 +38,7 @@ export default function IconSwitch(props: iconSwitchProps) {
         <motion.div
           className="handle"
           layout
-          transition={{ type: "spring", stiffness: 700, damping: 30 }}
+          transition={{ type: "spring", stiffness: 600, damping: 25 }}
           style={{
             width: "24px",
             height: "24px",
