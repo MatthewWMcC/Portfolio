@@ -29,7 +29,7 @@ export default function Landing() {
         </Text>
       </Stack>
       <Box boxSize={{ base: "xs", md: "md" }} my={{ base: 5, md: 0 }}>
-        <Image src="./profile.jpg"></Image>
+        <Image src="./profile.jpg" alt=""></Image>
       </Box>
     </Flex>
   );

@@ -32,7 +32,12 @@ export default function Project(props: projectProps) {
       gap={0}
     >
       <AspectRatio ratio={1} w="full">
-        <Image className="img-cover" src={image} objectFit="contain"></Image>
+        <Image
+          className="img-cover"
+          src={image}
+          objectFit="contain"
+          alt=""
+        ></Image>
       </AspectRatio>
       <Box w="full" p={2} pt={1}>
         <Flex justifyContent="space-between" align="center" pb={1}>

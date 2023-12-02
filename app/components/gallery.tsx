@@ -18,7 +18,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
   const length = useConst(() => images.length);
   const [index, setIndex] = useState(0);
 
-  const currentImage = useMemo(() => images[index], [index]);
+  const currentImage = useMemo(() => images[index], [index, images]);
 
   const decrement = () => {
     setIndex(() => {
@@ -36,6 +36,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
       return index;
     });
   };
+  const buttonColor = useColorModeValue("gray.100", "gray.700");
 
   return (
     <Flex direction="column" w="full" position="relative">
@@ -56,7 +57,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
                 rounded={"full"}
                 onClick={decrement}
                 opacity={0.8}
-                bg={useColorModeValue("gray.100", "gray.700")}
+                bg={buttonColor}
               />
             )}
             {index < length - 1 && (
@@ -67,7 +68,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
                 ml="auto"
                 onClick={increment}
                 opacity={0.8}
-                bg={useColorModeValue("gray.100", "gray.700")}
+                bg={buttonColor}
               />
             )}
           </Flex>

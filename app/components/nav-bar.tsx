@@ -34,7 +34,7 @@ export default function NavBar() {
     "Contact Me",
   ];
 
-  const getNavLink = (link: string) => {
+  const NavLink = (link: string) => {
     return (
       <Flex key={link}>
         <Link
@@ -76,7 +76,7 @@ export default function NavBar() {
           display={{ base: "none", lg: "flex" }}
         >
           {links.map((link) => {
-            return getNavLink(link);
+            return NavLink(link);
           })}
         </Flex>
         <Flex flex={1} flexBasis="1" display={{ base: "flex", lg: "none" }}>
@@ -96,7 +96,12 @@ export default function NavBar() {
             rounded="md"
             p={0.5}
           >
-            <Image src="./portfolio-logo.png" h="50px" width="50px"></Image>
+            <Image
+              src="./portfolio-logo.png"
+              h="50px"
+              width="50px"
+              alt=""
+            ></Image>
           </Link>
         </Flex>
         <Flex flex={{ base: 1 }} justify={"flex-end"} flexBasis="1">
@@ -116,7 +121,7 @@ export default function NavBar() {
           borderColor={"black"}
         >
           {links.map((link) => {
-            return getNavLink(link);
+            return NavLink(link);
           })}
         </Stack>
       </Collapse>

@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { passions } from "../utils/contants";
 import Gallery from "./gallery";
+import Passion from "./passion";
 
 export default function Passions() {
   return (
@@ -26,28 +27,14 @@ export default function Passions() {
       >
         {passions.map(({ id, title, icon, description, images }) => {
           return (
-            <Flex
+            <Passion
               key={id}
-              direction="column"
-              w="full"
-              h="full"
-              bg={useColorModeValue("gray.100", "gray.700")}
-              rounded="md"
-              overflow="hidden"
-            >
-              <Box p={2}>
-                <Flex justify="space-between" align="center">
-                  <Text fontSize="xl" color="primary.800">
-                    {title}
-                  </Text>
-                  <Icon as={icon} w={8} height={8}></Icon>
-                </Flex>
-                <Text fontSize="sm" color="primary.800">
-                  {description}
-                </Text>
-              </Box>
-              <Gallery images={images} />
-            </Flex>
+              id={id}
+              title={title}
+              icon={icon}
+              description={description}
+              images={images}
+            />
           );
         })}
       </Grid>
