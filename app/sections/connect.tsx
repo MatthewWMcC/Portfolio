@@ -11,12 +11,18 @@ import {
   Box,
   Divider,
 } from "@chakra-ui/react";
-import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaPhone,
+} from "react-icons/fa";
 import { RiMapPin2Line } from "react-icons/ri";
 
 import { SiGmail } from "react-icons/si";
 
-import LinkButton from "./LinkButton";
+import LinkButton from "../components/LinkButton";
 
 export default function Connect() {
   return (
@@ -26,8 +32,8 @@ export default function Connect() {
       <Grid
         w={{ base: "100%" }}
         maxW={{ base: "400px", sm: "600px", lg: "800px" }}
-        gap={8}
-        templateColumns={"1fr 1px 1fr"}
+        gap={4}
+        templateColumns={{ base: "repeat(1, 1fr)", sm: "1fr 1px 1fr" }}
         position={"relative"}
       >
         <Stack justify="center" gap={5}>
@@ -47,12 +53,14 @@ export default function Connect() {
           h={"100%"}
           borderLeft="1px solid"
           borderColor={useColorModeValue("gray.200", "whiteAlpha.200")}
+          display={{ base: "none", sm: "block" }}
         ></Box>
         <Stack gap={5}>
           <LinkButton
             text={"GitHub"}
             icon={FaGithub}
             href={"https://github.com/MatthewWMcC/GeoPro"}
+            colorScheme={"negative"}
           />
           <LinkButton
             text={"LinkedIn"}

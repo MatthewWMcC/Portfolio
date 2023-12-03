@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
-import ProfileCard from "./profile-card";
+import ProfileCard from "../components/profile-card";
 
 export default function Landing() {
   return (
@@ -9,7 +9,7 @@ export default function Landing() {
       justify={{ base: "center", md: "space-around" }}
       direction={{ base: "column", md: "row" }}
       minH="calc(100vh - 80px)"
-      gap={2}
+      gap={5}
     >
       <Stack gap="10px">
         <Heading size="xl" color="primary.800">

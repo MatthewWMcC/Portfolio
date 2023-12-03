@@ -34,9 +34,7 @@ export default function ProfileCard() {
           Matthew McCracken
         </Text>
       </Box>
-      <AspectRatio>
-        <Image src="./profile.jpg" alt=""></Image>
-      </AspectRatio>
+      <Image src="./profile5x4.jpg" alt=""></Image>
       <Flex
         alignItems="center"
         gap={4}
@@ -46,8 +44,8 @@ export default function ProfileCard() {
         color={"white"}
       >
         <Icon as={HiMagnifyingGlass} h={8} w={8} />
-        <Text fontSize="sm" fontWeight="bold">
-          Looking for roles in Software Development and Design
+        <Text fontSize={{ base: "sm", sm: "md" }} fontWeight="bold">
+          {"Seeking roles in Full-Stack and Frontend Development"}
         </Text>
       </Flex>
       <Stack px={5} py={2}>
@@ -64,7 +62,9 @@ export default function ProfileCard() {
         <Flex alignItems="center" gap={4}>
           <Icon as={MdOutlineAlternateEmail} h={8} w={8} />
           <Flex alignItems="center">
-            <Text fontSize="xs">matthewwmccracken@gmail.com</Text>
+            <Text fontSize={{ base: "xs", sm: "sm" }}>
+              matthewwmccracken@gmail.com
+            </Text>
             <IconButton
               bg="transparent"
               icon={<Icon as={MdContentCopy} h={4} w={4} />}

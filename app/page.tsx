@@ -1,17 +1,20 @@
 import { Container } from "@chakra-ui/react";
 import styles from "./styles/page.module.css";
-import Landing from "./components/landing";
-import Projects from "./components/projects";
-import Passions from "./components/passions";
+import Landing from "./sections/landing";
+import Projects from "./sections/projects";
+import Passions from "./sections/passions";
 import Divider from "./components/divider";
-import Connect from "./components/connect";
-import Resume from "./components/resume";
+import Connect from "./sections/connect";
+import Resume from "./sections/resume";
+import AboutMe from "./sections/about-me";
 
 export default function Home() {
   return (
     <>
       <Container maxW="container.xl" padding={8}>
         <Landing />
+        <Divider />
+        <AboutMe />
         <Divider />
         <Projects />
         <Divider />

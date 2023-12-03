@@ -11,7 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { projects } from "../utils/contants";
-import Project from "./project";
+import Project from "../components/project";
 
 export default function Projects() {
   return (

@@ -38,14 +38,12 @@ export default function Passion({
     >
       <Box p={2}>
         <Flex justify="space-between" align="center">
-          <Text fontSize="xl" color="primary.800">
-            {title}
-          </Text>
+          <Text fontSize="xl">{title}</Text>
           <Icon as={icon} w={8} height={8}></Icon>
         </Flex>
-        <Text fontSize="sm" color="primary.800">
+        {/* <Text fontSize="sm">
           {description}
-        </Text>
+        </Text> */}
       </Box>
       <Gallery images={images} />
     </Flex>

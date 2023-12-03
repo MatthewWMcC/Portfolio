@@ -26,13 +26,7 @@ export default function NavBar() {
 
   const isLightMode = useMemo(() => colorMode === "light", [colorMode]);
 
-  const links = [
-    "Projects",
-    "Passions",
-    "Achievements",
-    "Resume",
-    "Connect",
-  ];
+  const links = ["About", "Projects", "Passions", "Resume", "Connect"];
 
   const NavLink = (link: string) => {
     return (

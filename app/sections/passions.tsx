@@ -9,8 +9,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { passions } from "../utils/contants";
-import Gallery from "./gallery";
-import Passion from "./passion";
+import Gallery from "../components/gallery";
+import Passion from "../components/passion";
 
 export default function Passions() {
   return (

@@ -10,6 +10,10 @@ const theme = extendTheme({
       200: "#c4c4c4",
       800: "#616161",
     },
+    negative: {
+      200: "#f7fafc",
+      500: "#2d3748",
+    },
   },
 });
 export default theme;
