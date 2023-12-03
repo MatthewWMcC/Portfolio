@@ -9,6 +9,7 @@ export default function Landing() {
       justify={{ base: "center", md: "space-around" }}
       direction={{ base: "column", md: "row" }}
       minH="calc(100vh - 80px)"
+      gap={2}
     >
       <Stack gap="10px">
         <Heading size="xl" color="primary.800">
@@ -29,10 +30,10 @@ export default function Landing() {
           , and continuous development.
         </Text>
       </Stack>
-      {/* <Box boxSize={{ base: "xs", md: "md" }} my={{ base: 5, md: 0 }}>
-        <Image src="./profile.jpg" alt=""></Image>
-      </Box> */}
-      <ProfileCard />
+      <Box maxW={"sm"} rounded={"xl"} overflow={"hidden"}>
+        <Image src="./landing-photo.jpg" alt=""></Image>
+      </Box>
+      {/* <ProfileCard /> */}
     </Flex>
   );
 }
