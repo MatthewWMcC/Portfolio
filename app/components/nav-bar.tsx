@@ -31,7 +31,7 @@ export default function NavBar() {
     "Passions",
     "Achievements",
     "Resume",
-    "Contact Me",
+    "Connect",
   ];
 
   const NavLink = (link: string) => {

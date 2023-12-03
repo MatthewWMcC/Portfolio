@@ -4,7 +4,8 @@ import Landing from "./components/landing";
 import Projects from "./components/projects";
 import Passions from "./components/passions";
 import Divider from "./components/divider";
-import Contact from "./components/contact";
+import Connect from "./components/connect";
+import Resume from "./components/resume";
 
 export default function Home() {
   return (
@@ -16,7 +17,9 @@ export default function Home() {
         <Divider />
         <Passions />
         <Divider />
-        <Contact />
+        <Resume />
+        <Divider />
+        <Connect />
       </Container>
     </>
   );

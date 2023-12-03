@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
+import ProfileCard from "./profile-card";
 
 export default function Landing() {
   return (
@@ -28,9 +29,10 @@ export default function Landing() {
           , and continuous development.
         </Text>
       </Stack>
-      <Box boxSize={{ base: "xs", md: "md" }} my={{ base: 5, md: 0 }}>
+      {/* <Box boxSize={{ base: "xs", md: "md" }} my={{ base: 5, md: 0 }}>
         <Image src="./profile.jpg" alt=""></Image>
-      </Box>
+      </Box> */}
+      <ProfileCard />
     </Flex>
   );
 }

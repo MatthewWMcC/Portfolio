@@ -11,17 +11,17 @@ import {
   Box,
   Divider,
 } from "@chakra-ui/react";
-import { FaEnvelope, FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
 import { RiMapPin2Line } from "react-icons/ri";
 
 import { SiGmail } from "react-icons/si";
 
 import LinkButton from "./LinkButton";
 
-export default function Contact() {
+export default function Connect() {
   return (
-    <Flex id="Contact%20Me" align="center" direction="column" minH={"50vh"}>
-      <Text fontSize="3xl">Contact Me</Text>
+    <Flex id="Connect" align="center" direction="column" minH={"50vh"}>
+      <Text fontSize="3xl">Connect with me</Text>
       <br></br>
       <Grid
         w={{ base: "100%" }}
@@ -61,10 +61,10 @@ export default function Contact() {
             colorScheme={"blue"}
           />
           <LinkButton
-            text={"Email"}
-            icon={FaEnvelope}
-            href={"mailto:matthewwmccracken@gmail.com"}
-            colorScheme={"blue"}
+            text={"Instagram"}
+            icon={FaInstagram}
+            href={"https://www.instagram.com/matthewwmccracken/"}
+            colorScheme={"pink"}
           />
           <LinkButton
             text={"Geoguessr"}
