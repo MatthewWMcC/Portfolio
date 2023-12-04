@@ -42,7 +42,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
     <Flex direction="column" w="full" position="relative">
       <AspectRatio>
         <Flex>
-          <Image src={currentImage.image} maxH={"100%"}></Image>
+          <Image src={currentImage.image} maxH={"100%"} alt=""></Image>
           <Flex
             pos="absolute"
             top="50%"

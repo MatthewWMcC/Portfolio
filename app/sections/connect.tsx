@@ -59,7 +59,7 @@ export default function Connect() {
           <LinkButton
             text={"GitHub"}
             icon={FaGithub}
-            href={"https://github.com/MatthewWMcC/GeoPro"}
+            href={"https://github.com/MatthewWMcC"}
             colorScheme={"negative"}
           />
           <LinkButton
@@ -82,7 +82,6 @@ export default function Connect() {
           />
         </Stack>
       </Grid>
-      <Box position="absolute" w={1} bg={"black"}></Box>
     </Flex>
   );
 }

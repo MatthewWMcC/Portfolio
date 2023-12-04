@@ -20,8 +20,6 @@ export default function Home() {
         <Divider />
         <Passions />
         <Divider />
-        <Resume />
-        <Divider />
         <Connect />
       </Container>
     </>

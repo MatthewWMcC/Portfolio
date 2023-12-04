@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  AspectRatio,
   Box,
   Flex,
   Icon,
@@ -18,7 +17,7 @@ import {
   MdOutlineAlternateEmail,
   MdOutlineSchool,
 } from "react-icons/md";
-import { CiLocationArrow1 } from "react-icons/ci";
+import { TiLocationArrowOutline } from "react-icons/ti";
 
 export default function ProfileCard() {
   const { onCopy } = useClipboard("matthewwmccracken@gmail.com");
@@ -29,7 +28,7 @@ export default function ProfileCard() {
       maxW={"sm"}
       bg={useColorModeValue("gray.100", "gray.700")}
     >
-      <Box p={2}>
+      <Box px={5} py={2}>
         <Text fontSize="lg" fontWeight="bold">
           Matthew McCracken
         </Text>
@@ -44,7 +43,7 @@ export default function ProfileCard() {
         color={"white"}
       >
         <Icon as={HiMagnifyingGlass} h={8} w={8} />
-        <Text fontSize={{ base: "sm", sm: "md" }} fontWeight="bold">
+        <Text fontSize={{ base: "sm", sm: "md" }}>
           {"Seeking roles in Full-Stack and Frontend Development"}
         </Text>
       </Flex>
@@ -56,7 +55,7 @@ export default function ProfileCard() {
           </Text>
         </Flex>
         <Flex alignItems="center" gap={4}>
-          <Icon as={CiLocationArrow1} h={8} w={8} />
+          <Icon as={TiLocationArrowOutline} h={8} w={8} />
           <Text fontSize="sm">Hamilton, ON</Text>
         </Flex>
         <Flex alignItems="center" gap={4}>

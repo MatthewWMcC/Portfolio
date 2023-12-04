@@ -15,8 +15,9 @@ import {
   useColorMode,
   useColorModeValue,
   useDisclosure,
+  useOutsideClick,
 } from "@chakra-ui/react";
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 import IconSwitch from "./IconSwitch";
 import { IoMoon, IoSunny } from "react-icons/io5";
 
@@ -26,7 +27,17 @@ export default function NavBar() {
 
   const isLightMode = useMemo(() => colorMode === "light", [colorMode]);
 
-  const links = ["About", "Projects", "Passions", "Resume", "Connect"];
+  const links = ["About", "Projects", "Passions", "Connect", "Resume"];
+
+  const ref = useRef(null);
+  useOutsideClick({
+    ref: ref,
+    handler: () => {
+      if (isOpen) {
+        onToggle();
+      }
+    },
+  });
 
   const NavLink = (link: string) => {
     return (
@@ -106,7 +117,7 @@ export default function NavBar() {
           />
         </Flex>
       </Flex>
-      <Collapse in={isOpen} animateOpacity>
+      <Collapse in={isOpen} animateOpacity ref={ref}>
         <Stack
           bg={useColorModeValue("white", "gray.800")}
           p={4}

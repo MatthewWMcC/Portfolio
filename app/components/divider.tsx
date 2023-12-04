@@ -1,4 +1,4 @@
-import { Box, Divider as ChakraDivider } from "@chakra-ui/react";
+import { Divider as ChakraDivider } from "@chakra-ui/react";
 
 export default function Divider() {
   return (
