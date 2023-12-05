@@ -5,12 +5,10 @@ import {
   Box,
   Collapse,
   Flex,
-  Icon,
   IconButton,
   Image,
   Link,
   Stack,
-  Switch,
   Text,
   useColorMode,
   useColorModeValue,
@@ -18,7 +16,7 @@ import {
   useOutsideClick,
 } from "@chakra-ui/react";
 import { useMemo, useRef } from "react";
-import IconSwitch from "./IconSwitch";
+import IconSwitch from "./icon-switch";
 import { IoMoon, IoSunny } from "react-icons/io5";
 
 export default function NavBar() {
@@ -47,7 +45,7 @@ export default function NavBar() {
           borderRadius="8px"
           href={`/#${link}`}
           _hover={{
-            bg: useColorModeValue("gray.100", "gray.900"),
+            bg: useColorModeValue("blue.100", "blue.900"),
           }}
           width="100%"
           textAlign="center"
@@ -62,7 +60,8 @@ export default function NavBar() {
   return (
     <Box
       style={{ position: "sticky", top: 0, height: 60, zIndex: 10 }}
-      boxShadow="4px 0px 5px black"
+      boxShadow={useColorModeValue("4px 0px 5px black", "4px 0px 5px white")}
+      bg={"inherit"}
     >
       <Flex
         justifyContent="space-between"
@@ -70,9 +69,7 @@ export default function NavBar() {
         alignItems="center"
         px="4"
         py="2"
-        backgroundColor="white"
         align="center"
-        bg={useColorModeValue("white", "gray.800")}
       >
         <Flex
           gap={{ base: 0.5, xl: 1 }}
@@ -95,14 +92,14 @@ export default function NavBar() {
         <Flex>
           <Link
             _hover={{
-              bg: useColorModeValue("gray.100", "gray.900"),
+              bg: useColorModeValue("blue.100", "blue.900"),
             }}
             href="/#"
             rounded="md"
             p={0.5}
           >
             <Image
-              src="./portfolio-logo.png"
+              src="./portfolio-logo-v2.png"
               h="50px"
               width="50px"
               alt=""

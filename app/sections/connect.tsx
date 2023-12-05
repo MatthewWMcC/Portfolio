@@ -22,7 +22,7 @@ import { RiMapPin2Line } from "react-icons/ri";
 
 import { SiGmail } from "react-icons/si";
 
-import LinkButton from "../components/LinkButton";
+import LinkButton from "../components/link-button";
 
 export default function Connect() {
   return (
@@ -41,6 +41,11 @@ export default function Connect() {
             text={"Email"}
             icon={SiGmail}
             href={"mailto:matthewwmccracken@gmail.com"}
+            style={{
+              outline: "1px solid",
+              outlineColor: useColorModeValue("gray.700", "gray.100"),
+              outlineOffset: 0,
+            }}
           />
           <LinkButton
             text={"Phone"}
@@ -68,12 +73,12 @@ export default function Connect() {
             href={"https://www.linkedin.com/in/matthew-mccracken/"}
             colorScheme={"blue"}
           />
-          <LinkButton
+          {/* <LinkButton
             text={"Instagram"}
             icon={FaInstagram}
             href={"https://www.instagram.com/matthewwmccracken/"}
             colorScheme={"pink"}
-          />
+          /> */}
           <LinkButton
             text={"Geoguessr"}
             icon={RiMapPin2Line}

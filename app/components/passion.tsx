@@ -32,7 +32,8 @@ export default function Passion({
       direction="column"
       w="full"
       h="full"
-      bg={useColorModeValue("gray.100", "gray.700")}
+      outline="1px solid"
+      outlineColor={useColorModeValue("gray.700", "gray.100")}
       rounded="md"
       overflow="hidden"
     >

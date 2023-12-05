@@ -19,6 +19,7 @@ export default function Rating() {
               w={6}
               onClick={() => setRating(i)}
               color={color}
+              cursor={"pointer"}
             />
           );
         })}

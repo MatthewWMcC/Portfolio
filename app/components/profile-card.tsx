@@ -11,22 +11,29 @@ import {
   useClipboard,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useEffect } from "react";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import {
   MdContentCopy,
   MdOutlineAlternateEmail,
   MdOutlineSchool,
 } from "react-icons/md";
+import { LuCopy, LuCopyCheck } from "react-icons/lu";
+
 import { TiLocationArrowOutline } from "react-icons/ti";
 
 export default function ProfileCard() {
-  const { onCopy } = useClipboard("matthewwmccracken@gmail.com");
+  const { onCopy, hasCopied } = useClipboard(
+    "matthewwmccracken@gmail.com",
+    5000
+  );
 
   return (
     <Box
       rounded={"lg"}
       maxW={"sm"}
-      bg={useColorModeValue("gray.100", "gray.700")}
+      outline="1px solid"
+      outlineColor={useColorModeValue("gray.700", "gray.100")}
     >
       <Box px={5} py={2}>
         <Text fontSize="lg" fontWeight="bold">
@@ -37,10 +44,10 @@ export default function ProfileCard() {
       <Flex
         alignItems="center"
         gap={4}
-        bg={useColorModeValue("blue.400", "blue.700")}
+        bg={useColorModeValue("gray.700", "gray.100")}
         px={5}
         py={2}
-        color={"white"}
+        color={useColorModeValue("gray.100", "gray.800")}
       >
         <Icon as={HiMagnifyingGlass} h={8} w={8} />
         <Text fontSize={{ base: "sm", sm: "md" }}>
@@ -60,13 +67,13 @@ export default function ProfileCard() {
         </Flex>
         <Flex alignItems="center" gap={4}>
           <Icon as={MdOutlineAlternateEmail} h={8} w={8} />
-          <Flex alignItems="center">
+          <Flex alignItems="center" gap={1}>
             <Text fontSize={{ base: "xs", sm: "sm" }}>
               matthewwmccracken@gmail.com
             </Text>
             <IconButton
               bg="transparent"
-              icon={<Icon as={MdContentCopy} h={4} w={4} />}
+              icon={<Icon as={hasCopied ? LuCopyCheck : LuCopy} h={5} w={5} />}
               aria-label="copy email to clipboard"
               onClick={onCopy}
             />

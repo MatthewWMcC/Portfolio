@@ -36,7 +36,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
       return index;
     });
   };
-  const buttonColor = useColorModeValue("gray.100", "gray.700");
+  const buttonColor = useColorModeValue("gray.200", "gray.700");
 
   return (
     <Flex direction="column" w="full" position="relative">

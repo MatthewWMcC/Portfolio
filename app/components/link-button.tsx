@@ -5,6 +5,7 @@ import {
   Icon,
   Link,
 } from "@chakra-ui/react";
+import { CSSProperties } from "react";
 import { IconType } from "react-icons";
 
 interface linkButtonProps {
@@ -12,10 +13,16 @@ interface linkButtonProps {
   icon: IconType;
   colorScheme?: string;
   href: string;
+  style?: CSSProperties;
 }
 
-export default function LinkButton(props: linkButtonProps) {
-  const { text, icon, colorScheme = "gray", href } = props;
+const LinkButton: React.FC<linkButtonProps> = ({
+  text,
+  icon,
+  colorScheme = "gray",
+  href,
+  style,
+}) => {
   return (
     <Link href={href} rounded="md" isExternal>
       <Button
@@ -23,9 +30,12 @@ export default function LinkButton(props: linkButtonProps) {
         colorScheme={colorScheme}
         w="100%"
         tabIndex={-1}
+        style={style}
       >
         {text}
       </Button>
     </Link>
   );
-}
+};
+
+export default LinkButton;

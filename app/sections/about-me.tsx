@@ -27,7 +27,7 @@ export default function AboutMe() {
               color={useColorModeValue("gray.700", "gray.400")}
             >
               {
-                "I am a Software Developer with 2 years of professional experience and many more spent developing my skills. TypeScript, React, andSocket.io are my favorite learned tech's because they enable me to build multiplayer games to enjoy with friends."
+                "I am a Software Developer with 2 years of professional experience and many more spent developing my skills. TypeScript, React, and Socket.io are my favorite learned tech's because they enable me to build multiplayer games to enjoy with friends."
               }
             </Text>
           </Stack>
