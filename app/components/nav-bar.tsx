@@ -58,9 +58,16 @@ export default function NavBar() {
 
   return (
     <Box
-      style={{ position: "sticky", top: 0, height: 60, zIndex: 10 }}
-      boxShadow={useColorModeValue("4px 0px 5px black", "4px 0px 5px white")}
+      boxShadow={useColorModeValue(
+        "0px 2px 3px #2D3748",
+        "0px 2px 3px #EDF2F7"
+      )}
       bg={"inherit"}
+      position="sticky"
+      top={0}
+      height="60px"
+      zIndex={10}
+      ref={ref}
     >
       <Flex
         justifyContent="space-between"
@@ -113,13 +120,17 @@ export default function NavBar() {
           />
         </Flex>
       </Flex>
-      <Collapse in={isOpen} animateOpacity ref={ref}>
+      <Collapse in={isOpen} animateOpacity style={{ overflow: "visible" }}>
         <Stack
-          bg={useColorModeValue("white", "gray.800")}
           p={4}
           display={{ lg: "none" }}
-          borderY="1px"
-          borderColor={"black"}
+          borderTop="1px"
+          borderColor={useColorModeValue("gray.700", "gray.100")}
+          bg={useColorModeValue("blue.50", "blue.950")}
+          boxShadow={useColorModeValue(
+            "0px 2px 3px #2D3748",
+            "0px 2px 3px #EDF2F7"
+          )}
         >
           {navLinks.map(({ title, linkTo }) => {
             return NavLink(title, linkTo);

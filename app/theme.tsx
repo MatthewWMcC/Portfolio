@@ -2,6 +2,7 @@
 
 import { StyleFunctionProps, mode } from "@chakra-ui/theme-tools";
 import { extendTheme } from "@chakra-ui/react";
+
 const theme = extendTheme({
   initialColorMode: "dark",
   useSystemColorMode: false,
@@ -18,7 +19,7 @@ const theme = extendTheme({
       600: "#1A202C",
     },
     blue: {
-      950: "#0d1c30",
+      950: "#102036",
     },
   },
   styles: {

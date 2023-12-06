@@ -8,7 +8,7 @@ export default function Landing() {
       align="center"
       justify={{ base: "center", md: "space-around" }}
       direction={{ base: "column", md: "row" }}
-      minH="calc(100vh - 80px)"
+      minH="calc(100vh - 100px)"
       gap={5}
     >
       <Stack gap="10px">
@@ -30,10 +30,9 @@ export default function Landing() {
           , and continuous development.
         </Text>
       </Stack>
-      <Box maxW={"sm"} rounded={"xl"} overflow={"hidden"}>
+      <Box maxW={"md"} rounded={"xl"} overflow={"hidden"}>
         <Image src="./landing-photo.jpg" alt=""></Image>
       </Box>
-      {/* <ProfileCard /> */}
     </Flex>
   );
 }
