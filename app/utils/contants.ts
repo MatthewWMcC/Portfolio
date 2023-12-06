@@ -20,6 +20,14 @@ export const languageColorMap: Record<language, string> = {
   [language.MONGO]: "green",
 };
 
+export const navLinks = [
+  { title: "About", linkTo: "/#About" },
+  { title: "Projects", linkTo: "/#Projects" },
+  { title: "Passions", linkTo: "/#Passions" },
+  { title: "Connect", linkTo: "/#Connect" },
+  { title: "Resume", linkTo: "/resume" },
+];
+
 export const projects: projectProps[] = [
   {
     id: "geopro",

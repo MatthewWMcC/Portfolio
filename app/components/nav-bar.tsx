@@ -18,14 +18,13 @@ import {
 import { useMemo, useRef } from "react";
 import IconSwitch from "./icon-switch";
 import { IoMoon, IoSunny } from "react-icons/io5";
+import { navLinks } from "../utils/contants";
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
   const isLightMode = useMemo(() => colorMode === "light", [colorMode]);
-
-  const links = ["About", "Projects", "Passions", "Connect", "Resume"];
 
   const ref = useRef(null);
   useOutsideClick({
@@ -37,13 +36,13 @@ export default function NavBar() {
     },
   });
 
-  const NavLink = (link: string) => {
+  const NavLink = (title: string, linkTo: string) => {
     return (
-      <Flex key={link}>
+      <Flex key={title}>
         <Link
           p={2}
           borderRadius="8px"
-          href={`/#${link}`}
+          href={linkTo}
           _hover={{
             bg: useColorModeValue("blue.100", "blue.900"),
           }}
@@ -51,7 +50,7 @@ export default function NavBar() {
           textAlign="center"
           onClick={onToggle}
         >
-          <Text fontWeight={600}>{link}</Text>
+          <Text fontWeight={600}>{title}</Text>
         </Link>
       </Flex>
     );
@@ -77,8 +76,8 @@ export default function NavBar() {
           flexBasis="1"
           display={{ base: "none", lg: "flex" }}
         >
-          {links.map((link) => {
-            return NavLink(link);
+          {navLinks.map(({ title, linkTo }) => {
+            return NavLink(title, linkTo);
           })}
         </Flex>
         <Flex flex={1} flexBasis="1" display={{ base: "flex", lg: "none" }}>
@@ -122,8 +121,8 @@ export default function NavBar() {
           borderY="1px"
           borderColor={"black"}
         >
-          {links.map((link) => {
-            return NavLink(link);
+          {navLinks.map(({ title, linkTo }) => {
+            return NavLink(title, linkTo);
           })}
         </Stack>
       </Collapse>

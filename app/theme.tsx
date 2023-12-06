@@ -1,8 +1,9 @@
 "use client";
 
-import { extendTheme, useColorModeValue } from "@chakra-ui/react";
+import { StyleFunctionProps, mode } from "@chakra-ui/theme-tools";
+import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
-  // initialColorMode: "dark",
+  initialColorMode: "dark",
   useSystemColorMode: false,
   colors: {
     grey: {
@@ -17,14 +18,13 @@ const theme = extendTheme({
       600: "#1A202C",
     },
     blue: {
-      25: "#f2f9fc",
       950: "#0d1c30",
     },
   },
   styles: {
-    global: () => ({
+    global: (props: StyleFunctionProps) => ({
       body: {
-        bg: useColorModeValue("blue.50", "blue.950"),
+        bg: mode("blue.50", "blue.950")(props),
       },
     }),
   },
