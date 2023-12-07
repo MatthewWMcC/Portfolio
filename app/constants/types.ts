@@ -48,8 +48,23 @@ export interface iconSwitchProps {
   checked: boolean;
 }
 
-export interface IGeoQuestion {
+export interface IQuestion {
   question: string;
   answer: string;
   afterward: string;
+}
+
+export interface IHobbyThumbnail {
+  id: string;
+  title: string;
+  image: string;
+  description: string;
+  icon: IconType;
+}
+
+export interface IHobby {
+  id: string;
+  title: string;
+  thumbnail: string;
+  description: string;
 }

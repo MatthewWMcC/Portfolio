@@ -1,7 +1,7 @@
-import { language, hobbyProps, projectProps } from "./types";
+import { language, hobbyProps, projectProps, IHobbyThumbnail } from "./types";
 import { IoMdGlobe } from "react-icons/io";
 import { MdKayaking } from "react-icons/md";
-import Geography1 from "../components/hobby-annotations/geography-1";
+import { IoGameController } from "react-icons/io5";
 
 export const languageColorMap: Record<language, string> = {
   [language.JS]: "yellow",
@@ -70,37 +70,27 @@ export const projects: projectProps[] = [
   },
 ];
 
-export const hobbies: hobbyProps[] = [
+export const hobbyThumbnails: IHobbyThumbnail[] = [
   {
     id: "geography",
     title: "Geography",
-    icon: IoMdGlobe,
     description:
       'As a general Geography nerd, I enjoy Vexillology, Cartography, and the Anthropology associated with learning about different cultures. "How did a peoples physical environment impact their history?" is a question that fascinates me.',
-    images: [
-      {
-        id: "g1",
-        image: "./hobbies/hondio-wall-map.png",
-      },
-      {
-        id: "g2",
-        image: "./hobbies/geoguessr-view.png",
-      },
-      {
-        id: "g3",
-        image: "./hobbies/geoguessr-view.png",
-      },
-      {
-        id: "g4",
-        image: "./hobbies/geoguessr-master.png",
-      },
-    ],
+    image: "/hobbies/geography/thumbnail.png",
+    icon: IoMdGlobe,
   },
   {
     id: "kayaking",
     title: "Kayaking",
+    description: "",
+    image: "/hobbies/kayaking/thumbnail.jpg",
     icon: MdKayaking,
-    description: "Kayaking Description",
-    images: [{ id: "k1", image: "./hobbies/geoguessr-master.png" }],
+  },
+  {
+    id: "gaming",
+    title: "Gaming",
+    description: "",
+    image: "/hobbies/kayaking/thumbnail.jpg",
+    icon: IoGameController,
   },
 ];
