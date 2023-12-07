@@ -30,8 +30,8 @@ export interface projectProps {
 }
 
 export interface IGalleryImage {
+  id: string;
   image: string;
-  annotation?: JSX.Element | string;
 }
 
 export interface passionProps {
@@ -46,4 +46,10 @@ export interface iconSwitchProps {
   onChange: any;
   icon: IconType;
   checked: boolean;
+}
+
+export interface IGeoQuestion {
+  question: string;
+  answer: string;
+  afterward: string;
 }

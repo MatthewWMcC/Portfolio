@@ -13,6 +13,7 @@ import {
 import { IGalleryImage } from "../constants/types";
 import { useMemo, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Annotation from "./annotation";
 
 export default function Gallery(props: { images: IGalleryImage[] }) {
   const { images } = props;
@@ -112,7 +113,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
           position={"relative"}
           fontSize={["xs", "xs", "sm"]}
         >
-          {currentImage.annotation}
+          <Annotation id={currentImage.id} />
         </Box>
       </Flex>
 

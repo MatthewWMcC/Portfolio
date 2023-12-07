@@ -1,6 +1,7 @@
 import { language, passionProps, projectProps } from "./types";
 import { IoMdGlobe } from "react-icons/io";
 import { MdKayaking } from "react-icons/md";
+import Geography1 from "../components/passion-annotations/geography-1";
 
 export const languageColorMap: Record<language, string> = {
   [language.JS]: "yellow",
@@ -78,19 +79,20 @@ export const passions: passionProps[] = [
       'As a general Geography nerd, I enjoy Vexillology, Cartography, and the Anthropology associated with learning about different cultures. "How did a peoples physical environment impact their history?" is a question that fascinates me.',
     images: [
       {
+        id: "g1",
         image: "./passions/hondio-wall-map.png",
-        annotation:
-          'Henricus Hondius\' decorative world map from 1641 shows gorgeous artwork and cartographic misconceptions from the time. Noteable elements include showing California as an island, the incomplete northwestern landmass of the Americas, and a faint view of the mythical "Unknown Southern Land" marked as Terra Australis which really just shows the enlarged northern coastline of Australia. I was gifted a poster version of this map and it is a personal favorite.',
       },
       {
+        id: "g2",
         image: "./passions/geoguessr-view.png",
-        annotation:
-          "I am an avid Geoguessr player. In Geoguessr, players explore random Google Street View locations to pinpoint their exact whereabouts. Players can use clues such as the local language, architecture, physical geography, and even license plates to geolocate themselves. The game is a fun and engaging way to broaden my knowledge of other countries.",
       },
       {
+        id: "g3",
+        image: "./passions/geoguessr-view.png",
+      },
+      {
+        id: "g4",
         image: "./passions/geoguessr-master.png",
-        annotation:
-          "In Geoguessr, players can compete against each other to pinpoint various locations with more accuracy. There are large leagues and tournaments where expert Geoguessr's compete to show off their skill. This is the section where I humble brag by showing off that I am in the master division.",
       },
     ],
   },
@@ -99,11 +101,6 @@ export const passions: passionProps[] = [
     title: "Kayaking",
     icon: MdKayaking,
     description: "Kayaking Description",
-    images: [
-      {
-        image: "./passions/geoguessr-master.png",
-        // annotation: "I am an avid Geoguessr player...",
-      },
-    ],
+    images: [{ id: "k1", image: "./passions/geoguessr-master.png" }],
   },
 ];
