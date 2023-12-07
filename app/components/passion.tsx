@@ -8,10 +8,10 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { passions } from "../utils/contants";
+import { passions } from "../constants";
 import Gallery from "./gallery";
 import { IconType } from "react-icons";
-import { IGalleryImage } from "../utils/types";
+import { IGalleryImage } from "../constants/types";
 
 export default function Passion({
   id,
@@ -32,19 +32,15 @@ export default function Passion({
       direction="column"
       w="full"
       h="full"
-      outline="1px solid"
-      outlineColor={useColorModeValue("gray.700", "gray.100")}
       rounded="md"
-      overflow="hidden"
+      border="1px solid"
+      borderColor={useColorModeValue("gray.700", "gray.100")}
     >
       <Box p={2}>
         <Flex justify="space-between" align="center">
           <Text fontSize="xl">{title}</Text>
           <Icon as={icon} w={8} height={8}></Icon>
         </Flex>
-        {/* <Text fontSize="sm">
-          {description}
-        </Text> */}
       </Box>
       <Gallery images={images} />
     </Flex>

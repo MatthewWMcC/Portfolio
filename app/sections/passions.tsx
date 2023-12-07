@@ -8,7 +8,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { passions } from "../utils/contants";
+import { passions } from "../constants";
 import Gallery from "../components/gallery";
 import Passion from "../components/passion";
 
@@ -20,7 +20,7 @@ export default function Passions() {
       <br></br>
       <Grid
         w={{ base: "100%" }}
-        maxW={{ base: "400px", sm: "600px", lg: "800px" }}
+        maxW={{ base: "400px", sm: "1000px", lg: "1000px" }}
         gap={8}
         templateColumns={"repeat(1, 1fr)"}
         placeItems="center"

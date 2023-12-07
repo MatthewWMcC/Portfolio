@@ -14,8 +14,8 @@ import {
   AspectRatio,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { projectProps } from "../utils/types";
-import { languageColorMap } from "../utils/contants";
+import { projectProps } from "../constants/types";
+import { languageColorMap } from "../constants";
 import { LinkIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
 

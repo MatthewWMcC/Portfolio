@@ -10,7 +10,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { projects } from "../utils/contants";
+import { projects } from "../constants";
 import Project from "../components/project";
 
 export default function Projects() {

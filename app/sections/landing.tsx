@@ -1,5 +1,4 @@
 import { Box, Flex, Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
-import ProfileCard from "../components/profile-card";
 
 export default function Landing() {
   return (
@@ -30,7 +29,7 @@ export default function Landing() {
           , and continuous development.
         </Text>
       </Stack>
-      <Box maxW={"md"} rounded={"xl"} overflow={"hidden"}>
+      <Box maxW={"sm"} rounded={"xl"} overflow={"hidden"}>
         <Image src="./landing-photo.jpg" alt=""></Image>
       </Box>
     </Flex>

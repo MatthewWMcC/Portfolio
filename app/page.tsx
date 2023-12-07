@@ -9,7 +9,7 @@ import NavBar from "./components/nav-bar";
 
 export default function Home() {
   return (
-    <Container maxW="container.xl" padding={8}>
+    <Container maxW="container.xl" padding={{ base: 6, sm: 8 }}>
       <Landing />
       <Divider />
       <AboutMe />

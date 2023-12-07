@@ -18,7 +18,7 @@ import {
 import { useMemo, useRef } from "react";
 import IconSwitch from "./icon-switch";
 import { IoMoon, IoSunny } from "react-icons/io5";
-import { navLinks } from "../utils/contants";
+import { navLinks } from "../constants";
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();

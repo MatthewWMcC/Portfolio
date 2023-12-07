@@ -1,5 +1,5 @@
 import { Flex, Icon, Input, visuallyHiddenStyle } from "@chakra-ui/react";
-import { iconSwitchProps } from "../utils/types";
+import { iconSwitchProps } from "../constants/types";
 import { useState } from "react";
 import { motion } from "framer-motion";
 

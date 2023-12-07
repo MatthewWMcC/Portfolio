@@ -23,7 +23,7 @@ export default function AboutMe() {
           <Stack>
             <Text fontSize={"xl"}>The Journey</Text>
             <Text
-              fontSize={"sm"}
+              fontSize={["xs", "sm"]}
               color={useColorModeValue("gray.700", "gray.400")}
             >
               {
@@ -34,7 +34,7 @@ export default function AboutMe() {
           <Stack>
             <Text fontSize={"xl"}>{"Breaking a Couple Eggs"}</Text>
             <Text
-              fontSize={"sm"}
+              fontSize={["xs", "sm"]}
               color={useColorModeValue("gray.700", "gray.400")}
             >
               {
@@ -46,7 +46,7 @@ export default function AboutMe() {
           <Stack>
             <Text fontSize={"xl"}>{"It's like Poetry"}</Text>
             <Text
-              fontSize={"sm"}
+              fontSize={["xs", "sm"]}
               color={useColorModeValue("gray.700", "gray.400")}
             >
               {

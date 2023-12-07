@@ -90,7 +90,7 @@ export const passions: passionProps[] = [
       {
         image: "./passions/geoguessr-master.png",
         annotation:
-          "In Geoguessr, players can compete against each other to pinpoint various locations with more accuracy. There are large leagues and tournaments where expert Geoguessr's compete to show off their skill. This is the section where I humble brag by showing off that I am in the master division although if I am being honest I frequently oscillate between the gold and master divisions.",
+          "In Geoguessr, players can compete against each other to pinpoint various locations with more accuracy. There are large leagues and tournaments where expert Geoguessr's compete to show off their skill. This is the section where I humble brag by showing off that I am in the master division.",
       },
     ],
   },
@@ -102,7 +102,7 @@ export const passions: passionProps[] = [
     images: [
       {
         image: "./passions/geoguessr-master.png",
-        annotation: "I am an avid Geoguessr player...",
+        // annotation: "I am an avid Geoguessr player...",
       },
     ],
   },
