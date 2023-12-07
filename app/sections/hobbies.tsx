@@ -8,15 +8,15 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { passions } from "../constants";
+import { hobbies } from "../constants";
 import Gallery from "../components/gallery";
-import Passion from "../components/passion";
+import Hobby from "../components/hobby";
 
-export default function Passions() {
+export default function Hobbies() {
   return (
     <Flex align="center" direction="column" minH="calc(100vh - 60px)">
-      <Box id="Passions"></Box>
-      <Text fontSize="3xl">Passions</Text>
+      <Box id="Hobbies"></Box>
+      <Text fontSize="3xl">Hobbies</Text>
       <br></br>
       <Grid
         w={{ base: "100%" }}
@@ -25,9 +25,9 @@ export default function Passions() {
         templateColumns={"repeat(1, 1fr)"}
         placeItems="center"
       >
-        {passions.map(({ id, title, icon, description, images }) => {
+        {hobbies.map(({ id, title, icon, description, images }) => {
           return (
-            <Passion
+            <Hobby
               key={id}
               id={id}
               title={title}

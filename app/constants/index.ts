@@ -1,7 +1,7 @@
-import { language, passionProps, projectProps } from "./types";
+import { language, hobbyProps, projectProps } from "./types";
 import { IoMdGlobe } from "react-icons/io";
 import { MdKayaking } from "react-icons/md";
-import Geography1 from "../components/passion-annotations/geography-1";
+import Geography1 from "../components/hobby-annotations/geography-1";
 
 export const languageColorMap: Record<language, string> = {
   [language.JS]: "yellow",
@@ -24,7 +24,7 @@ export const languageColorMap: Record<language, string> = {
 export const navLinks = [
   { title: "About", linkTo: "/#About" },
   { title: "Projects", linkTo: "/#Projects" },
-  { title: "Passions", linkTo: "/#Passions" },
+  { title: "Hobbies", linkTo: "/#Hobbies" },
   { title: "Connect", linkTo: "/#Connect" },
   { title: "Resume", linkTo: "/resume" },
 ];
@@ -70,7 +70,7 @@ export const projects: projectProps[] = [
   },
 ];
 
-export const passions: passionProps[] = [
+export const hobbies: hobbyProps[] = [
   {
     id: "geography",
     title: "Geography",
@@ -80,19 +80,19 @@ export const passions: passionProps[] = [
     images: [
       {
         id: "g1",
-        image: "./passions/hondio-wall-map.png",
+        image: "./hobbies/hondio-wall-map.png",
       },
       {
         id: "g2",
-        image: "./passions/geoguessr-view.png",
+        image: "./hobbies/geoguessr-view.png",
       },
       {
         id: "g3",
-        image: "./passions/geoguessr-view.png",
+        image: "./hobbies/geoguessr-view.png",
       },
       {
         id: "g4",
-        image: "./passions/geoguessr-master.png",
+        image: "./hobbies/geoguessr-master.png",
       },
     ],
   },
@@ -101,6 +101,6 @@ export const passions: passionProps[] = [
     title: "Kayaking",
     icon: MdKayaking,
     description: "Kayaking Description",
-    images: [{ id: "k1", image: "./passions/geoguessr-master.png" }],
+    images: [{ id: "k1", image: "./hobbies/geoguessr-master.png" }],
   },
 ];

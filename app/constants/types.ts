@@ -34,7 +34,7 @@ export interface IGalleryImage {
   image: string;
 }
 
-export interface passionProps {
+export interface hobbyProps {
   id: string;
   title: string;
   icon: IconType;

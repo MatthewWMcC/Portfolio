@@ -8,7 +8,7 @@ import NavBar from "./components/nav-bar";
 export const metadata: Metadata = {
   title: "Matthew McCracken - Portfolio",
   description:
-    "Welcome to my website. This is the home of my Projects, Passions, and a place to show off my creativity.",
+    "Welcome to my website. This is the home of my Projects, Hobbies, and a place to show off my creativity.",
 };
 
 export default function RootLayout({

@@ -1,7 +1,7 @@
 import { Container } from "@chakra-ui/react";
 import Landing from "./sections/landing";
 import Projects from "./sections/projects";
-import Passions from "./sections/passions";
+import Hobbies from "./sections/hobbies";
 import Divider from "./components/divider";
 import Connect from "./sections/connect";
 import AboutMe from "./sections/about-me";
@@ -16,7 +16,7 @@ export default function Home() {
       <Divider />
       <Projects />
       <Divider />
-      <Passions />
+      <Hobbies />
       <Divider />
       <Connect />
     </Container>

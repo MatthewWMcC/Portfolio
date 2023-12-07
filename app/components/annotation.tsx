@@ -6,8 +6,8 @@ import {
   g2Annotation,
   g3Question,
 } from "../constants/annotations";
-import Geography1 from "./passion-annotations/geography-1";
-import GeoQuestion from "./passion-annotations/geo-question";
+import Geography1 from "./hobby-annotations/geography-1";
+import GeoQuestion from "./hobby-annotations/geo-question";
 
 export default function Annotation({ id }: { id: string }) {
   switch (id) {

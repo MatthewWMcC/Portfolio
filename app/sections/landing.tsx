@@ -23,8 +23,8 @@ export default function Landing() {
             Projects
           </Link>
           ,{" "}
-          <Link color="teal.500" href="/#Passions">
-            Passions
+          <Link color="teal.500" href="/#Hobbies">
+            Hobbies
           </Link>
           , and continuous development.
         </Text>

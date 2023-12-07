@@ -8,12 +8,12 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { passions } from "../constants";
+import { hobbies } from "../constants";
 import Gallery from "./gallery";
 import { IconType } from "react-icons";
 import { IGalleryImage } from "../constants/types";
 
-export default function Passion({
+export default function Hobby({
   id,
   title,
   icon,
