@@ -26,7 +26,7 @@ import LinkButton from "../components/link-button";
 
 export default function Connect() {
   return (
-    <Flex id="Connect" align="center" direction="column" minH={"50vh"}>
+    <Flex id="Connect" align="center" direction="column" minH={"300px"}>
       <Text fontSize="3xl">Connect with me</Text>
       <br></br>
       <Grid

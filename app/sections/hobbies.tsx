@@ -10,11 +10,12 @@ export default async function Hobbies() {
     <Flex align="center" direction="column" minH="calc(50vh )">
       <Box id="Hobbies"></Box>
       <Text fontSize="3xl">Hobbies</Text>
+      <Text fontSize="md">Click on each section to see more.</Text>
       <br></br>
       <Grid
         w={{ base: "100%" }}
-        maxW={{ base: "400px", sm: "800px", lg: "1000px" }}
-        gap={[4, 2, 8]}
+        maxW={{ base: "200px", sm: "800px" }}
+        gap={[4, 4, 6]}
         templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)", "repeat(3, 1fr)"]}
         placeItems="center"
       >

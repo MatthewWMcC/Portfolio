@@ -2,6 +2,7 @@
 
 import {
   AspectRatio,
+  Box,
   Flex,
   Icon,
   Image,
@@ -13,7 +14,7 @@ import { IHobby } from "../constants/types";
 import { motion } from "framer-motion";
 import { MdKayaking } from "react-icons/md";
 import { IoMdGlobe } from "react-icons/io";
-import { FaGamepad } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGamepad } from "react-icons/fa";
 
 export default function HobbyThumbnail({
   slug,
@@ -46,28 +47,33 @@ export default function HobbyThumbnail({
         style={{ height: "100%" }}
         whileHover={{
           scale: 1.05,
-          transition: { duration: 0.5 },
+          transition: { duration: 0.25 },
         }}
       >
-        <Flex
-          direction="column"
-          h="full"
-          rounded="md"
-          overflow={"hidden"}
-          border="1px solid"
-          borderColor={useColorModeValue("gray.600", "gray.100")}
-        >
-          <AspectRatio ratio={4 / 3} w="full">
-            <Image src={thumbnail} alt=""></Image>
-          </AspectRatio>
-          <Flex p={2} direction={"column"} justifyContent={"space-between"}>
-            <Flex justify="space-between" align="center">
-              <Text fontSize={{ base: "lg", md: "xl" }}>{title}</Text>
-              <Icon as={getIcon()} w={8} height={8}></Icon>
+        <AspectRatio ratio={1} w="full">
+          <Box rounded={"xl"} position={"relative"} border="1px solid">
+            <Image
+              src={thumbnail}
+              alt=""
+              w={"full"}
+              h={"full"}
+              objectFit={"cover"}
+            ></Image>
+            <Flex
+              position={"absolute"}
+              bottom={0}
+              width={"full"}
+              justify={"space-between"}
+              bg={useColorModeValue("blue.50", "blue.950")}
+              borderTop="1px solid"
+              padding={1}
+              align={"center"}
+            >
+              <Text fontSize={"lg"}>{title}</Text>
+              <Icon as={getIcon()} w={6} height={6}></Icon>
             </Flex>
-            <Text fontSize={{ base: "xs", lg: "sm" }}>{description}</Text>
-          </Flex>
-        </Flex>
+          </Box>
+        </AspectRatio>
       </motion.div>
     </Link>
   );

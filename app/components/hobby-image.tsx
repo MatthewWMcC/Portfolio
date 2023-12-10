@@ -13,7 +13,6 @@ import {
   ModalContent,
   ModalOverlay,
   useDisclosure,
-  visuallyHiddenStyle,
 } from "@chakra-ui/react";
 import { IImage } from "../constants/types";
 import { FaExpand } from "react-icons/fa";
@@ -28,8 +27,6 @@ export default function HobbyImage({
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { src } = image;
-
-  const [zoomed, setZoomed] = useState(false);
 
   const handleOpen = () => {
     onOpen();
@@ -113,7 +110,8 @@ export default function HobbyImage({
               w={"auto"}
               fit={"contain"}
               src={src}
-              alt=""
+              alt="Zoomed In Image"
+              cursor={"zoom-in"}
             ></Image>
           </ModalBody>
         </ModalContent>

@@ -65,6 +65,8 @@ export default function NavBar() {
       bg={"inherit"}
       position="sticky"
       top={0}
+      left={0}
+      right={0}
       height="60px"
       zIndex={10}
       ref={ref}

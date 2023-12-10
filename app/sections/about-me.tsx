@@ -12,11 +12,11 @@ export default function AboutMe() {
       <br></br>
       <Flex
         w={{ base: "100%" }}
-        maxW="850px"
+        maxW="1000px"
         align="center"
-        justify="space-between"
+        justify="space-evenly"
         direction={{ base: "column", md: "row" }}
-        gap={10}
+        gap={6}
       >
         <ProfileCard />
         <Stack minW={"3xs"} maxW={"sm"} gap={5}>

@@ -1,8 +1,12 @@
 import { AnswerState } from "../constants/types";
 import { IoCheckmark, IoClose, IoGlobe, IoEye } from "react-icons/io5";
 
-export const isStringEqual = (string1: string, string2: string) => {
-  return string1.toLocaleLowerCase() === string2.toLocaleLowerCase();
+export const standardizeString = (str: string) => {
+  return str.toLocaleLowerCase().split(" ").join("");
+};
+
+export const isStringEqual = (str1: string, str2: string) => {
+  return standardizeString(str1) === standardizeString(str2);
 };
 
 export const getAnswerPromptIcon = (value: AnswerState) => {

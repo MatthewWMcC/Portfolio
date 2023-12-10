@@ -6,10 +6,11 @@ import Divider from "./components/divider";
 import Connect from "./sections/connect";
 import AboutMe from "./sections/about-me";
 import NavBar from "./components/nav-bar";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <Container maxW="container.xl" padding={{ base: 6, sm: 8 }}>
+    <Container maxW="container.lg" padding={{ base: 6, sm: 8 }}>
       <Landing />
       <Divider />
       <AboutMe />
@@ -19,6 +20,8 @@ export default function Home() {
       <Hobbies />
       <Divider />
       <Connect />
+      <Divider />
+      <Footer />
     </Container>
   );
 }

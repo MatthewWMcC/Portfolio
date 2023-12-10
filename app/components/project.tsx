@@ -13,11 +13,14 @@ import {
   Text,
   AspectRatio,
   useColorModeValue,
+  Button,
 } from "@chakra-ui/react";
 import { projectProps } from "../constants/types";
 import { languageColorMap } from "../constants";
 import { LinkIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
+import LinkButton from "./link-button";
+import { LuLink } from "react-icons/lu";
 
 export default function Project(props: projectProps) {
   const { title, description, image, languages, githubLink, liveLink } = props;
@@ -40,18 +43,21 @@ export default function Project(props: projectProps) {
           alt=""
         ></Image>
       </AspectRatio>
-      <Box w="full" p={2} pt={1}>
+      <Box w="full" p={2} pt={1} borderTop="1px solid">
         <Flex justifyContent="space-between" align="center" pb={1}>
           <Text fontSize="xl">{title}</Text>
-          <Flex gap={1}>
+          <Flex gap={2}>
             {liveLink && (
               <Link href={liveLink} rounded="md" isExternal>
-                <IconButton
-                  bg="transparent"
-                  icon={<LinkIcon />}
-                  aria-label="live link"
+                <Button
+                  leftIcon={<Icon as={LuLink} />}
+                  w="100%"
                   tabIndex={-1}
-                />
+                  border={"1px solid"}
+                  bg={"transparent"}
+                >
+                  Visit
+                </Button>
               </Link>
             )}
             <Link href={githubLink} rounded="md" isExternal>
@@ -60,6 +66,7 @@ export default function Project(props: projectProps) {
                 icon={<Icon as={FaGithub} />}
                 aria-label="github"
                 tabIndex={-1}
+                border={"1px solid"}
               />
             </Link>
           </Flex>

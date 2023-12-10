@@ -20,11 +20,11 @@ export default function Projects() {
       <br></br>
       <Grid
         w={{ base: "100%" }}
-        maxW={{ base: "400px", sm: "600px", lg: "800px" }}
-        gap={6}
+        maxW={{ base: "350px", md: "800px" }}
+        gap={8}
         templateColumns={[
           "repeat(1, 1fr)",
-          "repeat(2, 1fr)",
+          "repeat(1, 1fr)",
           "repeat(2, 1fr)",
           "repeat(2 ,1fr)",
         ]}

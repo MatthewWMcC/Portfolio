@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import theme from "./theme";
 import Head from "next/head";
 import NavBar from "./components/nav-bar";
+import Footer from "./components/footer";
 
 export const metadata: Metadata = {
   title: "Matthew McCracken - Portfolio",
