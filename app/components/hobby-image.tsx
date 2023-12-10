@@ -1,7 +1,23 @@
 "use client";
 
-import { AspectRatio, Flex, Image } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Box,
+  Flex,
+  Icon,
+  IconButton,
+  Image,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalOverlay,
+  useDisclosure,
+  visuallyHiddenStyle,
+} from "@chakra-ui/react";
 import { IImage } from "../constants/types";
+import { FaExpand } from "react-icons/fa";
+import { useState } from "react";
 
 export default function HobbyImage({
   image,
@@ -10,8 +26,17 @@ export default function HobbyImage({
   image: IImage;
   children: React.ReactNode;
 }) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { src } = image;
+
+  const [zoomed, setZoomed] = useState(false);
+
+  const handleOpen = () => {
+    onOpen();
+  };
+
   return (
-    <Flex direction={"column"}>
+    <Flex direction={"column"} position={"relative"}>
       <Flex
         direction={{ base: "column", md: "row" }}
         rounded={"xl"}
@@ -25,7 +50,27 @@ export default function HobbyImage({
           borderRight={{ base: "none", md: "solid 1px" }}
           borderBottom={{ base: "solid 1px", md: "none" }}
         >
-          <Image src={image.src} maxH={"100%"} alt=""></Image>
+          <Flex position={"relative"} cursor={"pointer"} onClick={handleOpen}>
+            <Image
+              h="full"
+              w="full"
+              fit={"cover"}
+              src={src}
+              maxH={"100%"}
+              alt=""
+            ></Image>
+            <Box position={"absolute"} right={2} top={2}>
+              <IconButton
+                icon={<Icon as={FaExpand} h={5} w={5} />}
+                aria-label="expand image"
+                bg={"gray.900"}
+                color={"gray.200"}
+                h={8}
+                w={8}
+                onClick={handleOpen}
+              />
+            </Box>
+          </Flex>
         </AspectRatio>
 
         <Flex
@@ -40,6 +85,39 @@ export default function HobbyImage({
           {children}
         </Flex>
       </Flex>
+
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        motionPreset="slideInBottom"
+        size="6xl"
+        allowPinchZoom={true}
+        isCentered={true}
+      >
+        <ModalOverlay />
+
+        <ModalContent
+          m={0}
+          alignContent={"center"}
+          justifyContent={"center"}
+          bg={"transparent"}
+          w={"fit-content"}
+          h={"fit-content"}
+        >
+          <ModalCloseButton />
+          <ModalBody p={0}>
+            <Image
+              maxH="80vh"
+              maxW="full"
+              h={"auto"}
+              w={"auto"}
+              fit={"contain"}
+              src={src}
+              alt=""
+            ></Image>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Flex>
   );
 }

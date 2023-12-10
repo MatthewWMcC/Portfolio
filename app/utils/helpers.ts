@@ -9,7 +9,7 @@ export const getAnswerPromptIcon = (value: AnswerState) => {
   if (value === AnswerState.CORRECT) {
     return {
       icon: IoCheckmark,
-      color: "green",
+      color: "green.400",
     };
   } else if (value === AnswerState.WRONG) {
     return {

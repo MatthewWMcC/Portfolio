@@ -9,6 +9,7 @@ import {
   InputLeftElement,
   InputRightElement,
   Text,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { AnswerState, IQuestionPrompt } from "../constants/types";
 import { useMemo, useState } from "react";
@@ -50,7 +51,6 @@ export default function QuestionPrompt({
   return (
     <Flex direction={"column"}>
       <Text>{question}</Text>
-
       <Flex color={"black"} py={2} direction={"column"}>
         <InputGroup>
           <InputLeftElement pointerEvents="none" color="gray.600">
