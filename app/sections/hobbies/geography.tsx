@@ -38,6 +38,46 @@ export default function Geography() {
         />
       </HobbyImage>
       <Divider />
+      <HobbyImage
+        image={{
+          id: "geo2",
+          src: "/hobbies/geography/geoguessr-quiz-2.png",
+        }}
+      >
+        <QuestionPrompt
+          questionPrompt={{
+            id: "geo2",
+            question:
+              "Sometimes you have to combine different clues to paint a fuller picture.",
+            answer: "Thailand",
+            successMessage:
+              "This is where a good foundational knowledge of world geography comes in handy. Knowing that Bangkok is the capital of Thailand or recognizing Thai script can make the difference.",
+            failMessage:
+              "This is where a good foundational knowledge of world geography comes in handy. Knowing that Bangkok is the capital of Thailand or recognizing Thai script can make the difference.",
+          }}
+        />
+      </HobbyImage>
+      <Divider />
+      <HobbyImage
+        image={{
+          id: "geo3",
+          src: "/hobbies/geography/geoguessr-quiz-3.png",
+        }}
+      >
+        <QuestionPrompt
+          questionPrompt={{
+            id: "geo3",
+            question:
+              "There is not much given here but some keen observations can narrow down the options.",
+            answer: "Chile",
+            successMessage:
+              "Well done! The combination of the Spanish language and the Snow Peaked mountains in the distance will clue in seasoned players that we are in Chile along the Andes Mountain Range. Few other spanish speaking countries share this cold, mountainous landscape.",
+            failMessage:
+              "That was a hard one. The combination of the Spanish language and the Snow Peaked mountains in the distance could clue in players that we are in Chile along the Andes Mountain Range. Few other spanish speaking countries share this cold, mountainous landscape.",
+          }}
+        />
+      </HobbyImage>
+      <Divider />
     </Box>
   );
 }
