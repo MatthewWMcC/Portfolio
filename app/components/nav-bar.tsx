@@ -105,7 +105,7 @@ export default function NavBar() {
             p={0.5}
           >
             <Image
-              src="./portfolio-logo-v2.png"
+              src="/images/portfolio-logo-v2.png"
               h="50px"
               width="50px"
               alt=""
@@ -125,7 +125,7 @@ export default function NavBar() {
           p={4}
           display={{ lg: "none" }}
           borderTop="1px"
-          borderColor={useColorModeValue("gray.700", "gray.100")}
+          borderColor={useColorModeValue("gray.600", "gray.100")}
           bg={useColorModeValue("blue.50", "blue.950")}
           boxShadow={useColorModeValue(
             "0px 2px 3px #2D3748",

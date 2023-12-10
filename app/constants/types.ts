@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { IconType } from "react-icons";
 
 export enum language {
@@ -29,9 +28,9 @@ export interface projectProps {
   liveLink?: string;
 }
 
-export interface IGalleryImage {
+export interface IImage {
   id: string;
-  image: string;
+  src: string;
 }
 
 export interface hobbyProps {
@@ -39,7 +38,7 @@ export interface hobbyProps {
   title: string;
   icon: IconType;
   description: string;
-  images: IGalleryImage[];
+  images: IImage[];
 }
 
 export interface iconSwitchProps {
@@ -48,23 +47,34 @@ export interface iconSwitchProps {
   checked: boolean;
 }
 
-export interface IQuestion {
+export interface IQuestionPrompt {
+  id: string;
   question: string;
   answer: string;
-  afterward: string;
+  successMessage: string;
+  failMessage: string;
 }
 
-export interface IHobbyThumbnail {
+export interface IHobbyItem {
   id: string;
-  title: string;
-  image: string;
-  description: string;
-  icon: IconType;
+  image?: string;
+  text?: string;
+  question?: string;
+  answer?: string;
+  successMessage?: string;
 }
 
 export interface IHobby {
   id: string;
+  order: number;
   title: string;
   thumbnail: string;
   description: string;
+}
+
+export enum AnswerState {
+  UNANSWERED = "UNANSWERED",
+  WRONG = "WRONG",
+  CORRECT = "CORRECT",
+  REVEAL = "REVEAL",
 }

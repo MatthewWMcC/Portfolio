@@ -1,18 +1,10 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  Icon,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { hobbyThumbnails } from "../constants";
+import { Box, Flex, Grid, Text } from "@chakra-ui/react";
 import HobbyThumbnail from "../components/hobby-thumbnail";
 import fs from "fs";
+import { IHobby } from "../constants/types";
 
 export default async function Hobbies() {
-  const { props } = await getHobbies();
-  console.log(props.hobbies);
+  const { hobbies } = await getHobbies();
 
   return (
     <Flex align="center" direction="column" minH="calc(50vh )">
@@ -26,32 +18,34 @@ export default async function Hobbies() {
         templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)", "repeat(3, 1fr)"]}
         placeItems="center"
       >
-        {hobbies.map((hobby) => {
-          return <HobbyThumbnail key={hobby.id} hobby={hobby} />;
+        {hobbies.map(({ slug, hobby }) => {
+          return <HobbyThumbnail key={hobby.id} slug={slug} hobby={hobby} />;
         })}
       </Grid>
     </Flex>
   );
 }
 
-async function getHobbies() {
+const getHobbies = async (): Promise<{
+  hobbies: { slug: string; hobby: IHobby }[];
+}> => {
   const files = fs.readdirSync("public/content/hobbies");
 
-  const hobbies = files.map((fileName) => {
-    const slug = fileName.replace(".json", "");
-    const data = JSON.parse(
-      fs.readFileSync(`public/content/hobbies/${fileName}`, "utf-8")
-    );
+  const hobbies = files
+    .map((fileName) => {
+      const slug = fileName.replace(".json", "");
+      const data = JSON.parse(
+        fs.readFileSync(`public/content/hobbies/${fileName}`, "utf-8")
+      );
 
-    return {
-      slug,
-      data,
-    };
-  });
+      return {
+        slug,
+        hobby: data,
+      };
+    })
+    .sort((a, b) => a.hobby.order - b.hobby.order);
 
   return {
-    props: {
-      hobbies: hobbies,
-    },
+    hobbies: hobbies,
   };
-}
+};

@@ -27,7 +27,7 @@ export default function Project(props: projectProps) {
       w="full"
       h="full"
       outline="1px solid"
-      outlineColor={useColorModeValue("gray.700", "gray.100")}
+      outlineColor={useColorModeValue("gray.600", "gray.100")}
       rounded="md"
       overflow="hidden"
       gap={0}

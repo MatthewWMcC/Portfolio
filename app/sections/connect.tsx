@@ -43,7 +43,7 @@ export default function Connect() {
             href={"mailto:matthewwmccracken@gmail.com"}
             style={{
               outline: "1px solid",
-              outlineColor: useColorModeValue("gray.700", "gray.100"),
+              outlineColor: useColorModeValue("gray.600", "gray.100"),
               outlineOffset: 0,
             }}
           />

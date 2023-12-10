@@ -10,12 +10,11 @@ import {
   useColorModeValue,
   useConst,
 } from "@chakra-ui/react";
-import { IGalleryImage } from "../constants/types";
+import { IImage } from "../constants/types";
 import { useMemo, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Annotation from "./annotation";
 
-export default function Gallery(props: { images: IGalleryImage[] }) {
+export default function Gallery(props: { images: IImage[] }) {
   const { images } = props;
   const length = useConst(() => images.length);
   const [index, setIndex] = useState(0);
@@ -38,7 +37,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
       return index;
     });
   };
-  const buttonColor = useColorModeValue("gray.200", "gray.700");
+  const buttonColor = useColorModeValue("gray.200", "gray.600");
   const buttonHoverColor = useColorModeValue("gray.300", "gray.600");
 
   return (
@@ -53,7 +52,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
         <AspectRatio w="full" maxH={700}>
           <Flex position={"relative"} w="full">
             <Image
-              src={currentImage.image}
+              src={currentImage.src}
               maxH={"100%"}
               alt=""
               className="img-cover"
@@ -99,7 +98,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
         <Box
           h={"100%"}
           borderLeft="1px solid"
-          borderColor={useColorModeValue("gray.700", "gray.100")}
+          borderColor={useColorModeValue("gray.600", "gray.100")}
           opacity={0.75}
           m={3}
           display={{ base: "none", md: "block" }}
@@ -113,7 +112,7 @@ export default function Gallery(props: { images: IGalleryImage[] }) {
           position={"relative"}
           fontSize={["xs", "xs", "sm"]}
         >
-          <Annotation id={currentImage.id} />
+          {/* <Text>{currentImage.annotation}</Text> */}
         </Box>
       </Flex>
 

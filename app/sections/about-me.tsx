@@ -24,7 +24,7 @@ export default function AboutMe() {
             <Text fontSize={"xl"}>The Journey</Text>
             <Text
               fontSize={["xs", "sm"]}
-              color={useColorModeValue("gray.700", "gray.400")}
+              color={useColorModeValue("gray.600", "gray.400")}
             >
               {
                 "I am a Software Developer with 2 years of professional experience and many more spent developing my skills. TypeScript, React, and Socket.io are my favorite learned tech's because they enable me to build multiplayer games to enjoy with friends."
@@ -35,7 +35,7 @@ export default function AboutMe() {
             <Text fontSize={"xl"}>{"Breaking a Couple Eggs"}</Text>
             <Text
               fontSize={["xs", "sm"]}
-              color={useColorModeValue("gray.700", "gray.400")}
+              color={useColorModeValue("gray.600", "gray.400")}
             >
               {
                 "When I take on a new project my goal is to learn a new technology or master an existing skill. I frequent Codecademy to learn about the new, hot tools in Web Development. Even this site was made with the Chakra UI library as I picked it up. How am I doing?"
@@ -47,7 +47,7 @@ export default function AboutMe() {
             <Text fontSize={"xl"}>{"It's like Poetry"}</Text>
             <Text
               fontSize={["xs", "sm"]}
-              color={useColorModeValue("gray.700", "gray.400")}
+              color={useColorModeValue("gray.600", "gray.400")}
             >
               {
                 "In my spare time I enjoy Kayaking, Social Gaming, and learning about Geography and History. My hobbies inspire me to keep creating new online experiences where I can share my hobbies and bring people together."

@@ -1,7 +1,7 @@
-import { language, hobbyProps, projectProps, IHobbyThumbnail } from "./types";
+import { AnswerState, language, projectProps } from "./types";
 import { IoMdGlobe } from "react-icons/io";
 import { MdKayaking } from "react-icons/md";
-import { IoGameController } from "react-icons/io5";
+import { IoCheckmark, IoGameController } from "react-icons/io5";
 
 export const languageColorMap: Record<language, string> = {
   [language.JS]: "yellow",
@@ -67,30 +67,5 @@ export const projects: projectProps[] = [
     image: "./projects/olympian-logo.png",
     languages: [language.GRAPH, language.NATIVE, language.PRISMA],
     githubLink: "https://github.com/MatthewWMcC/olympian-capstone",
-  },
-];
-
-export const hobbyThumbnails: IHobbyThumbnail[] = [
-  {
-    id: "geography",
-    title: "Geography",
-    description:
-      'As a general Geography nerd, I enjoy Vexillology, Cartography, and the Anthropology associated with learning about different cultures. "How did a peoples physical environment impact their history?" is a question that fascinates me.',
-    image: "/hobbies/geography/thumbnail.png",
-    icon: IoMdGlobe,
-  },
-  {
-    id: "kayaking",
-    title: "Kayaking",
-    description: "",
-    image: "/hobbies/kayaking/thumbnail.jpg",
-    icon: MdKayaking,
-  },
-  {
-    id: "gaming",
-    title: "Gaming",
-    description: "",
-    image: "/hobbies/kayaking/thumbnail.jpg",
-    icon: IoGameController,
   },
 ];
