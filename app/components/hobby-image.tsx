@@ -1,6 +1,6 @@
 "use client";
 
-import { AspectRatio, Box, Flex, Image, Text } from "@chakra-ui/react";
+import { AspectRatio, Flex, Image } from "@chakra-ui/react";
 import { IImage } from "../constants/types";
 
 export default function HobbyImage({
