@@ -7,10 +7,9 @@ import { Box } from "@chakra-ui/react";
 
 export default function Geography() {
   return (
-    <Box width={"full"} height={"full"}>
+    <Box width={"full"}>
       <HobbyImage
         image={{
-          id: "geo1",
           src: "/hobbies/geography/geoguessr-logo.jpg",
         }}
       >
@@ -21,7 +20,6 @@ export default function Geography() {
       <Divider />
       <HobbyImage
         image={{
-          id: "geo2",
           src: "/hobbies/geography/geoguessr-quiz-1.png",
         }}
       >
@@ -40,7 +38,6 @@ export default function Geography() {
       <Divider />
       <HobbyImage
         image={{
-          id: "geo2",
           src: "/hobbies/geography/geoguessr-quiz-2.png",
         }}
       >
@@ -60,7 +57,6 @@ export default function Geography() {
       <Divider />
       <HobbyImage
         image={{
-          id: "geo3",
           src: "/hobbies/geography/geoguessr-quiz-3.png",
         }}
       >

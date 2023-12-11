@@ -3,16 +3,17 @@
 import { Box, Flex, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 import ProfileCard from "../components/profile-card";
 import Rating from "../components/rating";
+import ScrollTo from "../components/scroll-to";
 
 export default function AboutMe() {
   return (
-    <Flex align="center" direction="column">
-      <Box id="About"></Box>
+    <Flex align="center" direction="column" position={"relative"}>
+      <ScrollTo id="About" />
       <Text fontSize="3xl">About Me</Text>
       <br></br>
       <Flex
         w={{ base: "100%" }}
-        maxW="1000px"
+        maxW="800px"
         align="center"
         justify="space-evenly"
         direction={{ base: "column", md: "row" }}

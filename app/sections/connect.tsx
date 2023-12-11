@@ -23,10 +23,18 @@ import { RiMapPin2Line } from "react-icons/ri";
 import { SiGmail } from "react-icons/si";
 
 import LinkButton from "../components/link-button";
+import ScrollTo from "../components/scroll-to";
 
 export default function Connect() {
   return (
-    <Flex id="Connect" align="center" direction="column" minH={"300px"}>
+    <Flex
+      align="center"
+      direction="column"
+      minH={"300px"}
+      position={"relative"}
+    >
+      <ScrollTo id="Connect" />
+
       <Text fontSize="3xl">Connect with me</Text>
       <br></br>
       <Grid
@@ -73,12 +81,6 @@ export default function Connect() {
             href={"https://www.linkedin.com/in/matthew-mccracken/"}
             colorScheme={"blue"}
           />
-          {/* <LinkButton
-            text={"Instagram"}
-            icon={FaInstagram}
-            href={"https://www.instagram.com/matthewwmccracken/"}
-            colorScheme={"pink"}
-          /> */}
           <LinkButton
             text={"Geoguessr"}
             icon={RiMapPin2Line}

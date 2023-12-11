@@ -3,6 +3,7 @@
 import { HamburgerIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import {
   Box,
+  Button,
   Collapse,
   Flex,
   IconButton,

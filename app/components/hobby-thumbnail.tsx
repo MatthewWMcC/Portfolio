@@ -52,6 +52,20 @@ export default function HobbyThumbnail({
       >
         <AspectRatio ratio={1} w="full">
           <Box rounded={"xl"} position={"relative"} border="1px solid">
+            <Flex
+              position={"absolute"}
+              top={0}
+              width={"full"}
+              justify={"space-between"}
+              bgGradient="linear(to-b, gray.900, transparent)"
+              p={1}
+              pb={3}
+              align={"center"}
+              color={"white"}
+            >
+              <Text fontSize={"lg"}>{title}</Text>
+              <Icon as={getIcon()} w={6} height={6}></Icon>
+            </Flex>
             <Image
               src={thumbnail}
               alt=""
@@ -59,19 +73,6 @@ export default function HobbyThumbnail({
               h={"full"}
               objectFit={"cover"}
             ></Image>
-            <Flex
-              position={"absolute"}
-              bottom={0}
-              width={"full"}
-              justify={"space-between"}
-              bg={useColorModeValue("blue.50", "blue.950")}
-              borderTop="1px solid"
-              padding={1}
-              align={"center"}
-            >
-              <Text fontSize={"lg"}>{title}</Text>
-              <Icon as={getIcon()} w={6} height={6}></Icon>
-            </Flex>
           </Box>
         </AspectRatio>
       </motion.div>

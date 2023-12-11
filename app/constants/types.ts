@@ -1,3 +1,4 @@
+import { ReactPortal } from "react";
 import { IconType } from "react-icons";
 
 export enum language {
@@ -29,8 +30,8 @@ export interface projectProps {
 }
 
 export interface IImage {
-  id: string;
   src: string;
+  annotation?: string | JSX.Element;
 }
 
 export interface hobbyProps {

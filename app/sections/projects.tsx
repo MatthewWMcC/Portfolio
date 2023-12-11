@@ -12,10 +12,12 @@ import {
 } from "@chakra-ui/react";
 import { projects } from "../constants";
 import Project from "../components/project";
+import ScrollTo from "../components/scroll-to";
 
 export default function Projects() {
   return (
-    <Flex id="Projects" align="center" direction="column">
+    <Flex align="center" direction="column" position={"relative"}>
+      <ScrollTo id="Projects" />
       <Text fontSize="3xl">Projects</Text>
       <br></br>
       <Grid

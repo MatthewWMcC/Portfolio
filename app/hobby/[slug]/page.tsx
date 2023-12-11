@@ -20,7 +20,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           align={"center"}
         >
           <Text fontSize={"2xl"}>{title}</Text>
-          <Text fontSize={"lg"} mb={10}>
+          <Text fontSize={["md", "lg"]} mb={10}>
             {description}
           </Text>
           {id === "geography" && <Geography />}

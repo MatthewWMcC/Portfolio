@@ -41,21 +41,21 @@ export default function Gallery(props: { images: IImage[] }) {
   const buttonHoverColor = useColorModeValue("gray.300", "gray.600");
 
   return (
-    <Flex direction="column">
-      <Flex
-        direction={{ base: "column", md: "row" }}
-        p={2}
-        pl={0}
-        pr={{ base: 0, md: 2 }}
-        align={"center"}
-      >
-        <AspectRatio w="full" maxH={700}>
-          <Flex position={"relative"} w="full">
+    <Flex direction="column" mx={{ base: -6, sm: 0 }}>
+      <Flex direction={{ base: "column", md: "row" }} align={"center"}>
+        <AspectRatio
+          w="full"
+          ratio={4 / 3}
+          bg={"gray.700"}
+          rounded={["none", "xl"]}
+          overflow={"hidden"}
+        >
+          <Box position={"relative"} w="full">
             <Image
               src={currentImage.src}
               maxH={"100%"}
+              h={"full"}
               alt=""
-              className="img-cover"
             ></Image>
             <Flex
               pos="absolute"
@@ -92,51 +92,45 @@ export default function Gallery(props: { images: IImage[] }) {
                 />
               )}
             </Flex>
-          </Flex>
+            <Flex
+              gap={1}
+              padding={1}
+              bg={useColorModeValue("gray.500", "gray.900")}
+              rounded={"full"}
+              position={"absolute"}
+              bottom={2}
+            >
+              {Array(length)
+                .fill(0)
+                .map((_, i) => {
+                  return (
+                    <Box
+                      key={i}
+                      w={2}
+                      h={2}
+                      bg={i === index ? "white" : "gray.300"}
+                      rounded="full"
+                    ></Box>
+                  );
+                })}
+            </Flex>
+            {currentImage.annotation && (
+              <Flex
+                padding={1}
+                position={"absolute"}
+                right={0}
+                bottom={"10%"}
+                maxW={["200px", "300px"]}
+                bgGradient="linear(to-l, blackAlpha.900, blackAlpha.800, blackAlpha.400)"
+                fontSize={["2xs", "sm", "md"]}
+                roundedLeft={"lg"}
+                color={"gray.100"}
+              >
+                {currentImage.annotation}
+              </Flex>
+            )}
+          </Box>
         </AspectRatio>
-
-        <Box
-          h={"100%"}
-          borderLeft="1px solid"
-          borderColor={useColorModeValue("gray.600", "gray.100")}
-          opacity={0.75}
-          m={3}
-          display={{ base: "none", md: "block" }}
-        ></Box>
-
-        <Box
-          w={{ base: "100%", md: "200px", lg: "250px" }}
-          maxWidth={"100%"}
-          flexShrink={0}
-          px={2}
-          position={"relative"}
-          fontSize={["xs", "xs", "sm"]}
-        >
-          {/* <Text>{currentImage.annotation}</Text> */}
-        </Box>
-      </Flex>
-
-      <Flex justify="center" pb={1}>
-        <Flex
-          gap={1}
-          padding={1}
-          bg={useColorModeValue("gray.500", "gray.900")}
-          rounded={"full"}
-        >
-          {Array(length)
-            .fill(0)
-            .map((_, i) => {
-              return (
-                <Box
-                  key={i}
-                  w={2}
-                  h={2}
-                  bg={i === index ? "white" : "gray.300"}
-                  rounded="full"
-                ></Box>
-              );
-            })}
-        </Flex>
       </Flex>
     </Flex>
   );
