@@ -71,6 +71,8 @@ export interface IHobby {
   title: string;
   thumbnail: string;
   description: string;
+  prev?: string;
+  next?: string;
 }
 
 export enum AnswerState {

@@ -17,7 +17,11 @@ export default function Footer() {
         </Text>
         <Text>
           {"Reach out @ "}
-          <Link color="blue.500" href={"mailto:matthewwmccracken@gmail.com"}>
+          <Link
+            color="blue.500"
+            href={"mailto:matthewwmccracken@gmail.com"}
+            isExternal={true}
+          >
             matthewwmccracken@gmail.com
           </Link>
         </Text>

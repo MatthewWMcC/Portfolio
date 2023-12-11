@@ -1,6 +1,13 @@
 "use client";
 
-import { Box, Flex, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import ProfileCard from "../components/profile-card";
 import Rating from "../components/rating";
 import ScrollTo from "../components/scroll-to";
@@ -38,9 +45,25 @@ export default function AboutMe() {
               fontSize={["xs", "sm"]}
               color={useColorModeValue("gray.600", "gray.400")}
             >
-              {
-                "When I take on a new project my goal is to learn a new technology or master an existing skill. I frequent Codecademy to learn about the new, hot tools in Web Development. Even this site was made with the Chakra UI library as I picked it up. How am I doing?"
-              }
+              When I take on a new project my goal is to learn a new technology
+              or master an existing skill. I frequent{" "}
+              <Link
+                color="blue.500"
+                href="https://www.codecademy.com/articles/subject/web-development"
+                isExternal={true}
+              >
+                Codecademy
+              </Link>{" "}
+              to learn about the new, hot tools in Web Development. Even this
+              site was made with the{" "}
+              <Link
+                color="blue.500"
+                href="https://chakra-ui.com/"
+                isExternal={true}
+              >
+                Chakra UI
+              </Link>{" "}
+              library as I picked it up. How am I doing?
             </Text>
             <Rating />
           </Stack>

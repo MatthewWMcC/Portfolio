@@ -1,5 +1,8 @@
+import { IoMdGlobe } from "react-icons/io";
 import { AnswerState } from "../constants/types";
 import { IoCheckmark, IoClose, IoGlobe, IoEye } from "react-icons/io5";
+import { MdKayaking } from "react-icons/md";
+import { FaGamepad } from "react-icons/fa";
 
 export const standardizeString = (str: string) => {
   return str.toLocaleLowerCase().split(" ").join("");
@@ -30,4 +33,18 @@ export const getAnswerPromptIcon = (value: AnswerState) => {
     icon: IoGlobe,
     color: "gray.700",
   };
+};
+
+export const getHobbyIcon = (id: string) => {
+  if (id === "geography") {
+    return IoMdGlobe;
+  } else if (id === "kayaking") {
+    return MdKayaking;
+  } else if (id === "gaming") {
+    return FaGamepad;
+  }
+};
+
+export const capitalizeFirst = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 };

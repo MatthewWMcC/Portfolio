@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import { MdKayaking } from "react-icons/md";
 import { IoMdGlobe } from "react-icons/io";
 import { FaExternalLinkAlt, FaGamepad } from "react-icons/fa";
+import { getHobbyIcon } from "../utils/helpers";
 
 export default function HobbyThumbnail({
   slug,
@@ -24,16 +25,6 @@ export default function HobbyThumbnail({
   hobby: IHobby;
 }) {
   const { id, title, description, thumbnail } = hobby;
-
-  const getIcon = () => {
-    if (id === "geography") {
-      return IoMdGlobe;
-    } else if (id === "kayaking") {
-      return MdKayaking;
-    } else if (id === "gaming") {
-      return FaGamepad;
-    }
-  };
 
   return (
     <Link
@@ -64,7 +55,7 @@ export default function HobbyThumbnail({
               color={"white"}
             >
               <Text fontSize={"lg"}>{title}</Text>
-              <Icon as={getIcon()} w={6} height={6}></Icon>
+              <Icon as={getHobbyIcon(id)} w={6} height={6}></Icon>
             </Flex>
             <Image
               src={thumbnail}
