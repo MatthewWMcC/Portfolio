@@ -90,6 +90,7 @@ export default function HobbyImage({
         size="6xl"
         isCentered={true}
         allowPinchZoom={true}
+        scrollBehavior={"inside"}
       >
         <ModalOverlay />
 

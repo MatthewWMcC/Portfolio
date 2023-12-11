@@ -13,6 +13,7 @@ interface linkButtonProps {
   icon: IconType;
   colorScheme?: string;
   href: string;
+  isExternal?: boolean;
   style?: CSSProperties;
 }
 
@@ -21,10 +22,11 @@ const LinkButton: React.FC<linkButtonProps> = ({
   icon,
   colorScheme = "gray",
   href,
+  isExternal = true,
   style,
 }) => {
   return (
-    <Link href={href} rounded="md" isExternal>
+    <Link href={href} rounded="md" isExternal={isExternal}>
       <Button
         leftIcon={<Icon as={icon} />}
         colorScheme={colorScheme}

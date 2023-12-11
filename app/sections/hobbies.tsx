@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import HobbyThumbnail from "../components/hobby-thumbnail";
 import fs from "fs";
 import { IHobby } from "../constants/types";
@@ -14,22 +14,17 @@ export default async function Hobbies() {
       <Text fontSize="md">Click on each section to see more.</Text>
       <br></br>
       <Flex w="full" justify={"center"} align={"center"} flexGrow={1}>
-        <Grid
+        <Flex
           w="100%"
           height={"100%"}
           maxW={{ base: "200px", sm: "800px" }}
           gap={[4, 4, 6]}
-          templateColumns={[
-            "repeat(1, 1fr)",
-            "repeat(3, 1fr)",
-            "repeat(3, 1fr)",
-          ]}
-          placeItems="center"
+          direction={["column", "row"]}
         >
           {hobbies.map(({ slug, hobby }) => {
             return <HobbyThumbnail key={hobby.id} slug={slug} hobby={hobby} />;
           })}
-        </Grid>
+        </Flex>
       </Flex>
     </Flex>
   );

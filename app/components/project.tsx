@@ -34,6 +34,7 @@ export default function Project(props: projectProps) {
       rounded="md"
       overflow="hidden"
       gap={0}
+      flex="0 0 calc(50% - 16px)"
     >
       <AspectRatio ratio={1} w="full">
         <Image

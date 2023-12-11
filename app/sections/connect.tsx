@@ -3,7 +3,6 @@
 import {
   Stack,
   Flex,
-  Grid,
   Icon,
   Text,
   useColorModeValue,
@@ -19,6 +18,7 @@ import {
   FaPhone,
 } from "react-icons/fa";
 import { RiMapPin2Line } from "react-icons/ri";
+import { GrUserManager } from "react-icons/gr";
 
 import { SiGmail } from "react-icons/si";
 
@@ -27,24 +27,24 @@ import ScrollTo from "../components/scroll-to";
 
 export default function Connect() {
   return (
-    <Flex
-      align="center"
-      direction="column"
-      minH={"300px"}
-      position={"relative"}
-    >
+    <Flex align="center" direction="column" minH={"300px"}>
       <ScrollTo id="Connect" />
-
       <Text fontSize="3xl">Connect with me</Text>
       <br></br>
-      <Grid
+      <Flex
         w={{ base: "100%" }}
         maxW={{ base: "400px", sm: "600px", lg: "800px" }}
-        gap={4}
-        templateColumns={{ base: "repeat(1, 1fr)", sm: "1fr 1px 1fr" }}
-        position={"relative"}
+        direction={["column", "row"]}
+        gap={[4, 0]}
       >
-        <Stack justify="center" gap={5}>
+        <Stack
+          justify="center"
+          gap={4}
+          flex={1}
+          pr={[0, 4, 6]}
+          color={useColorModeValue("gray.400", "whiteAlpha.300")}
+          borderRight={["none", "1px solid"]}
+        >
           <LinkButton
             text={"Email"}
             icon={SiGmail}
@@ -59,16 +59,18 @@ export default function Connect() {
             text={"Phone"}
             icon={FaPhone}
             href={"https://github.com/MatthewWMcC/GeoPro"}
-            colorScheme={"green"}
+            colorScheme={"cyan"}
+          />
+          <LinkButton
+            text={"Resume"}
+            icon={GrUserManager}
+            href={"/resume"}
+            isExternal={false}
+            colorScheme="green"
           />
         </Stack>
-        <Box
-          h={"100%"}
-          borderLeft="1px solid"
-          borderColor={useColorModeValue("gray.200", "whiteAlpha.200")}
-          display={{ base: "none", sm: "block" }}
-        ></Box>
-        <Stack gap={5}>
+
+        <Stack gap={4} flex={1} pl={[0, 4, 6]}>
           <LinkButton
             text={"GitHub"}
             icon={FaGithub}
@@ -79,7 +81,7 @@ export default function Connect() {
             text={"LinkedIn"}
             icon={FaLinkedin}
             href={"https://www.linkedin.com/in/matthew-mccracken/"}
-            colorScheme={"blue"}
+            colorScheme={"linkedin"}
           />
           <LinkButton
             text={"Geoguessr"}
@@ -88,7 +90,7 @@ export default function Connect() {
             colorScheme={"red"}
           />
         </Stack>
-      </Grid>
+      </Flex>
     </Flex>
   );
 }

@@ -24,7 +24,7 @@ export default function HobbyThumbnail({
   slug: string;
   hobby: IHobby;
 }) {
-  const { id, title, description, thumbnail } = hobby;
+  const { id, title, thumbnail } = hobby;
 
   return (
     <Link
