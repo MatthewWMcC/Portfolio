@@ -10,7 +10,12 @@ import Divider from "./divider";
 
 export default function Footer() {
   return (
-    <Flex justify={"space-between"} gap={2} direction={["column", "row"]}>
+    <Flex
+      justify={"space-between"}
+      gap={2}
+      direction={["column", "row"]}
+      fontSize={["sm", "sm", "md"]}
+    >
       <Box textAlign={["center", "start"]}>
         <Text>
           {"Thank you for sticking around to the end! Want to know more? "}

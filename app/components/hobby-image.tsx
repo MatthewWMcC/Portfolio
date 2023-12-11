@@ -89,6 +89,7 @@ export default function HobbyImage({
         motionPreset="slideInBottom"
         size="6xl"
         isCentered={true}
+        allowPinchZoom={true}
       >
         <ModalOverlay />
 

@@ -20,6 +20,7 @@ export default function HobbyFooter({
           w={{ sm: "200px" }}
           justifyContent={"space-between"}
           fontSize={["sm", "md"]}
+          border={"1px solid"}
         >
           <Icon as={FaChevronLeft}></Icon>
           <Flex align={"center"} gap={2}>
@@ -34,6 +35,7 @@ export default function HobbyFooter({
           w={{ sm: "200px" }}
           justifyContent={"space-between"}
           fontSize={["sm", "md"]}
+          border={"1px solid"}
         >
           <Flex align={"center"} gap={2}>
             {!!next && <Icon as={getHobbyIcon(next)}></Icon>}

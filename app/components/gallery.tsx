@@ -120,9 +120,9 @@ export default function Gallery(props: { images: IImage[] }) {
                 position={"absolute"}
                 right={0}
                 bottom={"10%"}
-                maxW={["200px", "300px"]}
+                maxW={["250px", "300px"]}
                 bgGradient="linear(to-l, blackAlpha.900, blackAlpha.800, blackAlpha.400)"
-                fontSize={["2xs", "sm", "md"]}
+                fontSize={["xs", "sm", "md"]}
                 roundedLeft={"lg"}
                 color={"gray.100"}
               >

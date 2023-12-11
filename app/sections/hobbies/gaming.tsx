@@ -10,16 +10,12 @@ export default function Gaming() {
       annotation: "The Last of Us: Part II",
     },
     {
-      src: "/hobbies/gaming/gallery-2.jpg",
+      src: "/hobbies/gaming/thumbnail.jpg",
       annotation: "Firewatch",
     },
     {
       src: "/hobbies/gaming/gallery-3.jpg",
       annotation: "Journey",
-    },
-    {
-      src: "/hobbies/gaming/thumbnail.jpg",
-      annotation: "Pokemon Pearl/Platinum",
     },
   ];
   return (

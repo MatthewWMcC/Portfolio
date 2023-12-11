@@ -29,8 +29,8 @@ export default function Landing() {
           , and continuous development.
         </Text>
       </Stack>
-      <Box maxW={"sm"} rounded={"xl"} overflow={"hidden"} flex={1}>
-        <Image src="./landing-photo.jpg" alt=""></Image>
+      <Box maxW={"sm"} rounded={"xl"} flex={1}>
+        <Image src="./landing-photo.jpg" alt="" rounded={"xl"}></Image>
       </Box>
     </Flex>
   );
