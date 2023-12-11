@@ -1,4 +1,4 @@
-import { Flex, Icon, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Icon, Link, useColorModeValue } from "@chakra-ui/react";
 import { useState } from "react";
 import { MdStarOutline, MdStarRate } from "react-icons/md";
 
@@ -12,15 +12,22 @@ export default function Rating() {
         .fill(0)
         .map((_, i) => {
           return (
-            <Icon
+            <Link
               key={i}
-              as={rating >= i ? MdStarRate : MdStarOutline}
-              h={6}
-              w={6}
+              h={"24px"}
+              href={"#0"}
               onClick={() => setRating(i)}
-              color={color}
-              cursor={"pointer"}
-            />
+              aria-label={`Give ${i} star rating`}
+            >
+              <Icon
+                key={i}
+                as={rating >= i ? MdStarRate : MdStarOutline}
+                h={6}
+                w={6}
+                color={color}
+                cursor={"pointer"}
+              />
+            </Link>
           );
         })}
     </Flex>

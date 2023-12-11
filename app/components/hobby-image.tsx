@@ -88,7 +88,6 @@ export default function HobbyImage({
         onClose={onClose}
         motionPreset="slideInBottom"
         size="6xl"
-        allowPinchZoom={true}
         isCentered={true}
       >
         <ModalOverlay />
@@ -111,7 +110,6 @@ export default function HobbyImage({
               fit={"contain"}
               src={src}
               alt="Zoomed In Image"
-              cursor={"zoom-in"}
             ></Image>
           </ModalBody>
         </ModalContent>

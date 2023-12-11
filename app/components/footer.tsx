@@ -17,14 +17,14 @@ export default function Footer() {
         </Text>
         <Text>
           {"Reach out @ "}
-          <Link color="teal.500" href={"mailto:matthewwmccracken@gmail.com"}>
+          <Link color="blue.500" href={"mailto:matthewwmccracken@gmail.com"}>
             matthewwmccracken@gmail.com
           </Link>
         </Text>
       </Box>
       <Box textAlign={["center", "end"]}>
         <Text>{"This site is a work in progress."}</Text>
-        <Text>{"Owned and operated by Matthew McCracken."}</Text>
+        <Text>{"Created by Matthew McCracken."}</Text>
       </Box>
     </Flex>
   );

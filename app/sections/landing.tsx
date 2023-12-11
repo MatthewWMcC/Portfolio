@@ -19,11 +19,11 @@ export default function Landing() {
         </Heading>
         <Text fontSize={{ base: "sm" }}>
           Welcome to the home of my{" "}
-          <Link color="teal.500" href="/#Projects">
+          <Link color="blue.500" href="/#Projects">
             Projects
           </Link>
           ,{" "}
-          <Link color="teal.500" href="/#Hobbies">
+          <Link color="blue.500" href="/#Hobbies">
             Hobbies
           </Link>
           , and continuous development.
