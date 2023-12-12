@@ -23,7 +23,7 @@ export default function Footer() {
         <Text>
           {"Reach out @ "}
           <Link
-            color="blue.500"
+            variant={"inline"}
             href={"mailto:matthewwmccracken@gmail.com"}
             isExternal={true}
           >

@@ -21,6 +21,10 @@ const theme = extendTheme({
     blue: {
       950: "#102036",
     },
+    outline: {
+      dark: "#EDF2F7",
+      light: "RGBA(0, 0, 0, 0.24)",
+    },
   },
   styles: {
     global: (props: StyleFunctionProps) => ({
@@ -28,6 +32,15 @@ const theme = extendTheme({
         bg: mode("blue.50", "blue.950")(props),
       },
     }),
+  },
+  components: {
+    Link: {
+      variants: {
+        inline: (props: StyleFunctionProps) => ({
+          color: props.colorMode === "dark" ? "blue.300" : "teal.500",
+        }),
+      },
+    },
   },
 });
 export default theme;

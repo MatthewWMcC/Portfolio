@@ -33,7 +33,7 @@ export default function ProfileCard() {
       rounded={"lg"}
       maxW={"sm"}
       outline="1px solid"
-      outlineColor={useColorModeValue("gray.700", "gray.100")}
+      outlineColor={useColorModeValue("outline.light", "outline.dark")}
     >
       <Box px={5} py={2}>
         <Text fontSize="lg" fontWeight="bold">

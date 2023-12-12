@@ -4,8 +4,8 @@ import {
   Divider as ChakraDivider,
   Icon,
   Link,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { CSSProperties } from "react";
 import { IconType } from "react-icons";
 
 interface linkButtonProps {
@@ -14,7 +14,7 @@ interface linkButtonProps {
   colorScheme?: string;
   href: string;
   isExternal?: boolean;
-  style?: CSSProperties;
+  borderColor?: string;
 }
 
 const LinkButton: React.FC<linkButtonProps> = ({
@@ -23,7 +23,7 @@ const LinkButton: React.FC<linkButtonProps> = ({
   colorScheme = "gray",
   href,
   isExternal = true,
-  style,
+  borderColor,
 }) => {
   return (
     <Link href={href} rounded="md" isExternal={isExternal}>
@@ -32,7 +32,8 @@ const LinkButton: React.FC<linkButtonProps> = ({
         colorScheme={colorScheme}
         w="100%"
         tabIndex={-1}
-        style={style}
+        border={borderColor ? "1px solid" : "none"}
+        borderColor={borderColor}
       >
         {text}
       </Button>

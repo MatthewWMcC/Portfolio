@@ -1,22 +1,7 @@
 "use client";
 
-import {
-  Stack,
-  Flex,
-  Icon,
-  Text,
-  useColorModeValue,
-  Button,
-  Box,
-  Divider,
-} from "@chakra-ui/react";
-import {
-  FaEnvelope,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaPhone,
-} from "react-icons/fa";
+import { Stack, Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import { FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
 import { RiMapPin2Line } from "react-icons/ri";
 import { GrUserManager } from "react-icons/gr";
 
@@ -49,11 +34,7 @@ export default function Connect() {
             text={"Email"}
             icon={SiGmail}
             href={"mailto:matthewwmccracken@gmail.com"}
-            style={{
-              outline: "1px solid",
-              outlineColor: useColorModeValue("gray.600", "gray.100"),
-              outlineOffset: 0,
-            }}
+            borderColor={useColorModeValue("outline.light", "outline.dark")}
           />
           <LinkButton
             text={"Phone"}

@@ -42,7 +42,12 @@ export default function HobbyThumbnail({
         }}
       >
         <AspectRatio ratio={1} w="full">
-          <Box rounded={"xl"} position={"relative"} border="1px solid">
+          <Box
+            rounded={"xl"}
+            position={"relative"}
+            outline="1px solid"
+            outlineColor={useColorModeValue("outline.light", "outline.dark")}
+          >
             <Flex
               position={"absolute"}
               top={0}

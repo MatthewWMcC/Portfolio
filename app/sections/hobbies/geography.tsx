@@ -113,11 +113,11 @@ export default function Geography() {
       <Divider />
       <Text pb={5}>
         If you enjoyed this quiz, check out{" "}
-        <Link color={"blue.500"} href="/#Projects">
+        <Link variant={"inline"} href="/#Projects">
           GeoPro
         </Link>{" "}
         or find my Geoguessr account in the{" "}
-        <Link color={"blue.500"} href="/#Connect">
+        <Link variant={"inline"} href="/#Connect">
           Connect
         </Link>{" "}
         section and join me for some friendly competition. I am always up for a

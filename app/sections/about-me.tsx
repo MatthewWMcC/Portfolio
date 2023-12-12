@@ -48,7 +48,7 @@ export default function AboutMe() {
               When I take on a new project my goal is to learn a new technology
               or master an existing skill. I frequent{" "}
               <Link
-                color="blue.500"
+                variant={"inline"}
                 href="https://www.codecademy.com/articles/subject/web-development"
                 isExternal={true}
               >
@@ -57,7 +57,7 @@ export default function AboutMe() {
               to learn about the new, hot tools in Web Development. Even this
               site was made with the{" "}
               <Link
-                color="blue.500"
+                variant={"inline"}
                 href="https://chakra-ui.com/"
                 isExternal={true}
               >

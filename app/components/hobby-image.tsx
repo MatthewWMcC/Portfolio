@@ -12,6 +12,7 @@ import {
   ModalCloseButton,
   ModalContent,
   ModalOverlay,
+  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import { IImage } from "../constants/types";
@@ -39,14 +40,10 @@ export default function HobbyImage({
         rounded={"xl"}
         overflow={"hidden"}
         border={"solid 1px"}
+        borderColor={useColorModeValue("outline.light", "outline.dark")}
         height={"full"}
       >
-        <AspectRatio
-          w="full"
-          ratio={4 / 3}
-          borderRight={{ base: "none", md: "solid 1px" }}
-          borderBottom={{ base: "solid 1px", md: "none" }}
-        >
+        <AspectRatio w="full" ratio={4 / 3}>
           <Flex position={"relative"} cursor={"pointer"} onClick={handleOpen}>
             <Image
               h="full"

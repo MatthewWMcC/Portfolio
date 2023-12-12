@@ -21,6 +21,7 @@ export default function HobbyFooter({
           justifyContent={"space-between"}
           fontSize={["sm", "md"]}
           border={"1px solid"}
+          borderColor={useColorModeValue("outline.light", "outline.dark")}
         >
           <Icon as={FaChevronLeft}></Icon>
           <Flex align={"center"} gap={2}>
@@ -36,6 +37,7 @@ export default function HobbyFooter({
           justifyContent={"space-between"}
           fontSize={["sm", "md"]}
           border={"1px solid"}
+          borderColor={useColorModeValue("outline.light", "outline.dark")}
         >
           <Flex align={"center"} gap={2}>
             {!!next && <Icon as={getHobbyIcon(next)}></Icon>}

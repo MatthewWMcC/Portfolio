@@ -17,9 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { projectProps } from "../constants/types";
 import { languageColorMap } from "../constants";
-import { LinkIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
-import LinkButton from "./link-button";
 import { LuLink } from "react-icons/lu";
 
 export default function Project(props: projectProps) {
@@ -30,7 +28,7 @@ export default function Project(props: projectProps) {
       w="full"
       h="full"
       outline="1px solid"
-      outlineColor={useColorModeValue("gray.600", "gray.100")}
+      outlineColor={useColorModeValue("outline.light", "outline.dark")}
       rounded="md"
       overflow="hidden"
       gap={0}
@@ -44,23 +42,33 @@ export default function Project(props: projectProps) {
           alt=""
         ></Image>
       </AspectRatio>
-      <Box w="full" p={2} pt={1} borderTop="1px solid">
+      <Box
+        w="full"
+        p={2}
+        pt={1}
+        borderTop="1px solid"
+        borderColor={useColorModeValue("outline.light", "outline.dark")}
+      >
         <Flex justifyContent="space-between" align="center" pb={1}>
           <Text fontSize="xl">{title}</Text>
           <Flex gap={2}>
-            {liveLink && (
-              <Link href={liveLink} rounded="md" isExternal>
-                <Button
-                  leftIcon={<Icon as={LuLink} />}
-                  w="100%"
-                  tabIndex={-1}
-                  border={"1px solid"}
-                  bg={"transparent"}
-                >
-                  Visit
-                </Button>
-              </Link>
-            )}
+            <Link
+              href={liveLink}
+              rounded="md"
+              isExternal
+              display={!liveLink ? "none" : "block"}
+            >
+              <Button
+                leftIcon={<Icon as={LuLink} />}
+                w="100%"
+                tabIndex={-1}
+                border={"1px solid"}
+                borderColor={useColorModeValue("outline.light", "outline.dark")}
+                bg={"transparent"}
+              >
+                Visit
+              </Button>
+            </Link>
             <Link href={githubLink} rounded="md" isExternal>
               <IconButton
                 bg="transparent"
@@ -68,6 +76,7 @@ export default function Project(props: projectProps) {
                 aria-label="github"
                 tabIndex={-1}
                 border={"1px solid"}
+                borderColor={useColorModeValue("outline.light", "outline.dark")}
               />
             </Link>
           </Flex>

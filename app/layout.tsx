@@ -1,4 +1,4 @@
-import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import "./styles/global.css";
 import { Metadata } from "next";
 import theme from "./theme";
@@ -36,7 +36,6 @@ export default function RootLayout({
       </Head>
       <body>
         <ChakraProvider theme={theme}>
-          <ColorModeScript initialColorMode={theme.initialColorMode} />
           <NavBar />
           {children}
         </ChakraProvider>

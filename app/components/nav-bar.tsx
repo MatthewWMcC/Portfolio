@@ -128,7 +128,6 @@ export default function NavBar() {
           p={4}
           display={{ lg: "none" }}
           borderTop="1px"
-          borderColor={useColorModeValue("gray.600", "gray.100")}
           bg={useColorModeValue("blue.50", "blue.950")}
           boxShadow={useColorModeValue(
             "0px 2px 3px #2D3748",
