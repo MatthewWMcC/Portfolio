@@ -61,7 +61,7 @@ export default function NavBar() {
     <Box
       boxShadow={useColorModeValue(
         "0px 2px 3px #2D3748",
-        "0px 2px 3px #EDF2F7"
+        "0px 2px 3px #b8c4e0"
       )}
       bg={"inherit"}
       position="sticky"

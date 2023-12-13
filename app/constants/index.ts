@@ -32,7 +32,7 @@ export const projects: projectProps[] = [
     id: "geopro",
     title: "GeoPro",
     description:
-      "Real-time multiplayer game where friends can compete based on their geography knowledge. Includes various gamemodes with mapbox integration. Try out City Guesser to see if you can pinpoint the worlds largest cities!",
+      "A Real-time multiplayer game where friends can compete based on their geography knowledge. Includes various game modes with mapbox integration. Try out City Guesser to see if you can pinpoint the world's largest cities!",
     image: "./projects/geopro-logo.svg",
     languages: [language.TS, language.SOCKET, language.GCP, language.REDUX],
     githubLink: "https://github.com/MatthewWMcC/GeoPro",
@@ -54,7 +54,7 @@ export const projects: projectProps[] = [
     id: "storytime",
     title: "StoryTime",
     description:
-      "A MERN-stack application allowing users to track and share their reading habits. Users can share their thoughts on specific chapters and comment on on and like other users insights in real time.",
+      "A MERN-stack application allowing users to track and share their reading habits. Users can share their thoughts on specific chapters and comment on and like other users' insights in real-time.",
     image: "./projects/storytime-logo.svg",
     languages: [language.JS, language.REACT, language.BOOT, language.MONGO],
     githubLink: "https://github.com/MatthewWMcC/StoryTime",

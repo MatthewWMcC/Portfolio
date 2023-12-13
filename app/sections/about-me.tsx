@@ -35,7 +35,7 @@ export default function AboutMe() {
               color={useColorModeValue("gray.600", "gray.400")}
             >
               {
-                "I am a Software Developer with 2 years of professional experience and many more spent developing my skills. TypeScript, React, and Socket.io are my favorite learned tech's because they enable me to build multiplayer games to enjoy with friends."
+                "I am a Software Developer with 2 years of professional experience and many more spent developing my skills. TypeScript, React, and Socket.io are my favorite learned techs because they enable me to build multiplayer games to enjoy with friends."
               }
             </Text>
           </Stack>
@@ -74,7 +74,7 @@ export default function AboutMe() {
               color={useColorModeValue("gray.600", "gray.400")}
             >
               {
-                "In my spare time I enjoy Kayaking, Social Gaming, and learning about Geography and History. My hobbies inspire me to keep creating new online experiences where I can share my hobbies and bring people together."
+                "In my spare time, I enjoy Kayaking, Social Gaming, and learning about Geography and History. My hobbies inspire me to keep creating new online experiences where I can innovate, be creative, and bring people together."
               }
             </Text>
           </Stack>

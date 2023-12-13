@@ -48,9 +48,9 @@ export default function Geography() {
               "Sometimes you have to combine different clues to paint a fuller picture.",
             answer: "Thailand",
             successMessage:
-              "This is where a good foundational knowledge of world geography comes in handy. Knowing that Bangkok is the capital of Thailand or recognizing Thai script can make the difference.",
+              "This is where a good foundational knowledge of world geography comes in handy. Knowing that Bangkok is the capital of Thailand or recognizing the Thai script can make the difference.",
             failMessage:
-              "This is where a good foundational knowledge of world geography comes in handy. Knowing that Bangkok is the capital of Thailand or recognizing Thai script can make the difference.",
+              "This is where a good foundational knowledge of world geography comes in handy. Knowing that Bangkok is the capital of Thailand or recognizing the Thai script can make the difference.",
           }}
         />
       </HobbyImage>
@@ -67,9 +67,9 @@ export default function Geography() {
               "There is not much given here but some keen observations can narrow down the options.",
             answer: "Chile",
             successMessage:
-              "Well done! The combination of the Spanish language and the Snow Peaked mountains in the distance will clue in seasoned players that we are in Chile along the Andes Mountain Range. Few other spanish speaking countries share this cold, mountainous landscape.",
+              "Well done! The combination of the Spanish language and the Snow Peaked mountains in the distance will clue in seasoned players that we are in Chile along the Andes Mountain Range. Few other Spanish-speaking countries share this cold, mountainous landscape.",
             failMessage:
-              "That was a hard one. The combination of the Spanish language and the Snow Peaked mountains in the distance could clue in players that we are in Chile along the Andes Mountain Range. Few other spanish speaking countries share this cold, mountainous landscape.",
+              "That was a hard one. The combination of the Spanish language and the Snow Peaked mountains in the distance could clue in players that we are in Chile along the Andes Mountain Range. Few other Spanish-speaking countries share this cold, mountainous landscape.",
           }}
         />
       </HobbyImage>
@@ -85,9 +85,9 @@ export default function Geography() {
             question: "What about this one?",
             answer: "Japan",
             successMessage:
-              "Good job! In this image the Japanese Streetsigns and unique thatched roofs can help with identification but a 3rd less obvious clue is the left hand drive. Fewer countries globally drive on the left so they are good to know. Some examples include the U.K., Australia, and Japan.",
+              "Good job! In this image, the Japanese street signs and unique thatched roofs can help with identification but a 3rd less obvious clue is the left-hand drive. Fewer countries globally drive on the left so they are good to know. Some examples include the U.K., Australia, and Japan.",
             failMessage:
-              "In this image the Japanese Streetsigns and unique thatched roofs can help with identification but a 3rd less obvious clue is the left hand drive. Fewer countries globally drive on the left so they are good to know. Some examples include the U.K., Australia, and Japan.",
+              "In this image, the Japanese street signs and unique thatched roofs can help with identification but a 3rd less obvious clue is the left-hand drive. Fewer countries globally drive on the left so they are good to know. Some examples include the U.K., Australia, and Japan.",
           }}
         />
       </HobbyImage>
@@ -101,12 +101,12 @@ export default function Geography() {
           questionPrompt={{
             id: "geo5",
             question:
-              "There are no signs in in this one. We need to instead look at the trees (or lack of) and climate.",
+              "There are no signs in this one. We need to instead look at the trees (or lack of) and climate.",
             answer: "Iceland",
             successMessage:
-              "Impressive! Located at the edge of the Arctic Circle, trees in Iceland are sparce and low lying. The country has a distinct 'Edge of the Earth' feeling and is one that I am eager to visit.",
+              "Impressive! Located at the edge of the Arctic Circle, trees in Iceland are sparse and low-lying. The country has a distinct 'Edge of the Earth' feeling and is one that I am eager to visit.",
             failMessage:
-              "A hard one, but Iceland has some unique identifiers to look out for. Located at the edge of the Arctic Circle, trees in Iceland are sparce and low lying. The country has a distinct 'Edge of the Earth' feeling and is one that I am eager to visit.",
+              "A hard one, but Iceland has some unique identifiers to look out for. Located at the edge of the Arctic Circle, trees in Iceland are sparse and low-lying. The country has a distinct 'Edge of the Earth' feeling and is one that I am eager to visit.",
           }}
         />
       </HobbyImage>
