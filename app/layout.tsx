@@ -29,13 +29,13 @@ export default function RootLayout({
         <meta property="og:image" content={"/images/website-image.png"} />
         <link
           rel="icon"
-          type="image/png"
+          type="image/x-icon"
           sizes="32x32"
           href="/icons/icon-32x32.png"
         />
         <link
           rel="icon"
-          type="image/png"
+          type="image/x-icon"
           sizes="16x16"
           href="/icons/icon-16x16.png"
         />

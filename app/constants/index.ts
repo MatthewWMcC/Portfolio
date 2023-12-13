@@ -33,11 +33,11 @@ export const projects: projectProps[] = [
     title: "GeoPro",
     description:
       "Real-time multiplayer game where friends can compete based on their geography knowledge. Includes various gamemodes with mapbox integration. Try out City Guesser to see if you can pinpoint the worlds largest cities!",
-    image: "./projects/geopro-logo.png",
+    image: "./projects/geopro-logo.svg",
     languages: [language.TS, language.SOCKET, language.GCP, language.REDUX],
     githubLink: "https://github.com/MatthewWMcC/GeoPro",
     liveLink: "https://geopro.herokuapp.com/",
-    bg: "gray.400",
+    bg: "green.700",
   },
   {
     id: "voyager-view",
