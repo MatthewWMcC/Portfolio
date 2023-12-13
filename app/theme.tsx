@@ -23,7 +23,7 @@ const theme = extendTheme({
     },
     outline: {
       dark: "#EDF2F7",
-      light: "RGBA(0, 0, 0, 0.24)",
+      light: "#718096",
     },
   },
   styles: {

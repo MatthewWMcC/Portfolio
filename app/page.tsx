@@ -5,7 +5,6 @@ import Hobbies from "./sections/hobbies";
 import Divider from "./components/divider";
 import Connect from "./sections/connect";
 import AboutMe from "./sections/about-me";
-import NavBar from "./components/nav-bar";
 import Footer from "./components/footer";
 
 export default function Home() {

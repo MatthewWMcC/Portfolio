@@ -25,14 +25,11 @@ export default function Project(props: projectProps) {
   return (
     <Flex
       direction="column"
-      w="full"
-      h="full"
-      outline="1px solid"
-      outlineColor={useColorModeValue("outline.light", "outline.dark")}
+      border="1px solid"
+      borderColor={useColorModeValue("outline.light", "outline.dark")}
       rounded="md"
       overflow="hidden"
-      gap={0}
-      flex="0 0 calc(50% - 16px)"
+      flex="0 0 calc(50% - 12px)"
     >
       <AspectRatio ratio={1} w="full">
         <Image
@@ -45,11 +42,10 @@ export default function Project(props: projectProps) {
       <Box
         w="full"
         p={2}
-        pt={1}
         borderTop="1px solid"
         borderColor={useColorModeValue("outline.light", "outline.dark")}
       >
-        <Flex justifyContent="space-between" align="center" pb={1}>
+        <Flex justifyContent="space-between" align="center" pb={2}>
           <Text fontSize="xl">{title}</Text>
           <Flex gap={2}>
             <Link

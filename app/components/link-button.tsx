@@ -26,14 +26,18 @@ const LinkButton: React.FC<linkButtonProps> = ({
   borderColor,
 }) => {
   return (
-    <Link href={href} rounded="md" isExternal={isExternal}>
+    <Link
+      href={href}
+      isExternal={isExternal}
+      border={borderColor ? "1px solid" : "none"}
+      borderColor={borderColor}
+      rounded={"md"}
+    >
       <Button
         leftIcon={<Icon as={icon} />}
         colorScheme={colorScheme}
         w="100%"
         tabIndex={-1}
-        border={borderColor ? "1px solid" : "none"}
-        borderColor={borderColor}
       >
         {text}
       </Button>

@@ -14,11 +14,9 @@ export default function Projects() {
       <Flex
         w={{ base: "100%" }}
         maxW={{ base: "350px", md: "800px" }}
-        gap={8}
+        gap={6}
         direction={{ base: "column", md: "row" }}
         flexWrap={"wrap"}
-        align={"center"}
-        justify={"space-between"}
       >
         {projects.map(
           ({

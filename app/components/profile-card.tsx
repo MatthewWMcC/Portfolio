@@ -32,8 +32,8 @@ export default function ProfileCard() {
     <Box
       rounded={"lg"}
       maxW={"sm"}
-      outline="1px solid"
-      outlineColor={useColorModeValue("outline.light", "outline.dark")}
+      border="1px solid"
+      borderColor={useColorModeValue("outline.light", "outline.dark")}
     >
       <Box px={5} py={2}>
         <Text fontSize="lg" fontWeight="bold">
