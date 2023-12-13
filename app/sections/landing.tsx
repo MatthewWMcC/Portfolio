@@ -11,10 +11,8 @@ export default function Landing() {
       gap={5}
     >
       <Stack gap="10px">
-        <Heading size="xl" color="primary.800">
-          {"Hi! I'm Matt."}
-        </Heading>
-        <Heading size="md" fontWeight="regular" color="primary.800">
+        <Heading size="xl">{"Hi! I'm Matt."}</Heading>
+        <Heading size="md" fontWeight="regular">
           {"Stick around to learn a bit about me."}
         </Heading>
         <Text fontSize={{ base: "sm" }}>

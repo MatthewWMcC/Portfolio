@@ -1,7 +1,4 @@
-import { AnswerState, language, projectProps } from "./types";
-import { IoMdGlobe } from "react-icons/io";
-import { MdKayaking } from "react-icons/md";
-import { IoCheckmark, IoGameController } from "react-icons/io5";
+import { language, projectProps } from "./types";
 
 export const languageColorMap: Record<language, string> = {
   [language.JS]: "yellow",
@@ -14,11 +11,13 @@ export const languageColorMap: Record<language, string> = {
   [language.BOOT]: "purple",
   [language.GRAPH]: "pink",
   [language.NATIVE]: "cyan",
-  [language.REACT]: "teal",
+  [language.REACT]: "blue",
   [language.REDUX]: "purple",
   [language.WEBPACK]: "blue",
   [language.PRISMA]: "grey",
   [language.MONGO]: "green",
+  [language.NEXT]: "negative",
+  [language.CHAKRA]: "teal",
 };
 
 export const navLinks = [
@@ -60,12 +59,12 @@ export const projects: projectProps[] = [
     githubLink: "https://github.com/MatthewWMcC/StoryTime",
   },
   {
-    id: "olympian",
-    title: "Olympian",
+    id: "personal-portfolio",
+    title: "Portfolio",
     description:
-      "A React Native application for users to explore new workout routines as posted by the public. Users can search and sort workouts based on their goals and create their own content for the public to discover.",
-    image: "./projects/olympian-logo.png",
-    languages: [language.GRAPH, language.NATIVE, language.PRISMA],
-    githubLink: "https://github.com/MatthewWMcC/olympian-capstone",
+      "The site you are on right now! This site is responsive and WCAG 2 accessible and offers dark mode, some fun motion effects, and an interactive quiz.",
+    image: "./images/portfolio-logo.svg",
+    languages: [language.NEXT, language.CHAKRA, language.TS],
+    githubLink: "https://github.com/MatthewWMcC/Portfolio",
   },
 ];

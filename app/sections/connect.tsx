@@ -39,7 +39,7 @@ export default function Connect() {
           <LinkButton
             text={"Phone"}
             icon={FaPhone}
-            href={"https://github.com/MatthewWMcC/GeoPro"}
+            href={"tel:+12895275108"}
             colorScheme={"cyan"}
           />
           <LinkButton

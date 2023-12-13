@@ -31,7 +31,11 @@ export default function Project(props: projectProps) {
       overflow="hidden"
       flex="0 0 calc(50% - 12px)"
     >
-      <AspectRatio ratio={1} w="full">
+      <AspectRatio
+        ratio={1}
+        w="full"
+        bg={useColorModeValue("blue.200", "blue.300")}
+      >
         <Image
           className="img-cover"
           src={image}

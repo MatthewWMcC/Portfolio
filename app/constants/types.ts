@@ -17,6 +17,8 @@ export enum language {
   WEBPACK = "Webpack",
   PRISMA = "prisma",
   MONGO = "Mongo",
+  NEXT = "Next.js",
+  CHAKRA = "Chakra UI",
 }
 
 export interface projectProps {
