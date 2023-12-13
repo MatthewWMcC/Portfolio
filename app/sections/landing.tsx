@@ -5,12 +5,12 @@ export default function Landing() {
     <Flex
       id="Landing"
       align="center"
-      justify={{ base: "center", md: "space-evenly" }}
+      justify={{ base: "center", md: "space-around" }}
       direction={{ base: "column", md: "row" }}
       minH="calc(100vh - 100px)"
       gap={5}
     >
-      <Stack gap="10px" flex={1}>
+      <Stack gap="10px">
         <Heading size="xl" color="primary.800">
           {"Hi! I'm Matt."}
         </Heading>
@@ -29,7 +29,7 @@ export default function Landing() {
           , and continuous development.
         </Text>
       </Stack>
-      <Box maxW={"sm"} rounded={"xl"} flex={1}>
+      <Box maxW={"sm"} rounded={"xl"}>
         <Image src="./landing-photo.jpg" alt="" rounded={"xl"}></Image>
       </Box>
     </Flex>
