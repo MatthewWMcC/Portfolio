@@ -120,7 +120,7 @@ export default function NavBar() {
               src="/images/portfolio-logo-v2.png"
               h="50px"
               width="50px"
-              alt=""
+              alt="Website Logo"
             ></Image>
           </Link>
         </Flex>

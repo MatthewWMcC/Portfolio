@@ -12,9 +12,6 @@ import {
 } from "@chakra-ui/react";
 import { IHobby } from "../constants/types";
 import { motion } from "framer-motion";
-import { MdKayaking } from "react-icons/md";
-import { IoMdGlobe } from "react-icons/io";
-import { FaExternalLinkAlt, FaGamepad } from "react-icons/fa";
 import { getHobbyIcon } from "../utils/helpers";
 
 export default function HobbyThumbnail({
@@ -64,7 +61,7 @@ export default function HobbyThumbnail({
             </Flex>
             <Image
               src={thumbnail}
-              alt=""
+              alt={`${title} logo thumbnail`}
               w={"full"}
               h={"full"}
               objectFit={"cover"}

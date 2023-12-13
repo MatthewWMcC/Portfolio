@@ -33,6 +33,7 @@ export interface projectProps {
 
 export interface IImage {
   src: string;
+  alt: string;
   annotation?: string | JSX.Element;
 }
 

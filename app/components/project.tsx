@@ -44,7 +44,7 @@ export default function Project(props: projectProps) {
           className="img-cover"
           src={image}
           objectFit="contain"
-          alt=""
+          alt={`${title} Logo`}
         ></Image>
       </AspectRatio>
       <Box

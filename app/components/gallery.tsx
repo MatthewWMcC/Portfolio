@@ -55,7 +55,7 @@ export default function Gallery(props: { images: IImage[] }) {
               src={currentImage.src}
               maxH={"100%"}
               h={"full"}
-              alt=""
+              alt={currentImage.alt}
             ></Image>
             <Flex
               pos="absolute"

@@ -58,7 +58,11 @@ export default function Landing() {
           border={"2px dashed"}
           borderColor={useColorModeValue("outline.light", "outline.dark")}
         >
-          <Image src="./landing-photo.jpg" alt="" rounded={"full"}></Image>
+          <Image
+            src="./landing-photo.jpg"
+            alt="Website Landing Photo"
+            rounded={"full"}
+          ></Image>
         </Box>
       </motion.div>
     </Flex>

@@ -11,6 +11,7 @@ export default function Geography() {
       <HobbyImage
         image={{
           src: "/hobbies/geography/geoguessr-logo.jpg",
+          alt: "Geoguessr Logo",
         }}
       >
         {
@@ -21,6 +22,7 @@ export default function Geography() {
       <HobbyImage
         image={{
           src: "/hobbies/geography/geoguessr-quiz-1.png",
+          alt: "A streetview image from a mystery country.",
         }}
       >
         <QuestionPrompt
@@ -39,6 +41,7 @@ export default function Geography() {
       <HobbyImage
         image={{
           src: "/hobbies/geography/geoguessr-quiz-2.png",
+          alt: "A streetview image from a mystery country.",
         }}
       >
         <QuestionPrompt
@@ -58,6 +61,7 @@ export default function Geography() {
       <HobbyImage
         image={{
           src: "/hobbies/geography/geoguessr-quiz-3.png",
+          alt: "A streetview image from a mystery country.",
         }}
       >
         <QuestionPrompt
@@ -77,6 +81,7 @@ export default function Geography() {
       <HobbyImage
         image={{
           src: "/hobbies/geography/geoguessr-quiz-4.png",
+          alt: "A streetview image from a mystery country.",
         }}
       >
         <QuestionPrompt
@@ -95,6 +100,7 @@ export default function Geography() {
       <HobbyImage
         image={{
           src: "/hobbies/geography/geoguessr-quiz-5.png",
+          alt: "A streetview image from a mystery country.",
         }}
       >
         <QuestionPrompt

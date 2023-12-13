@@ -27,7 +27,7 @@ export default function HobbyImage({
   children: React.ReactNode;
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { src } = image;
+  const { src, alt } = image;
 
   const handleOpen = () => {
     onOpen();
@@ -51,7 +51,7 @@ export default function HobbyImage({
               fit={"cover"}
               src={src}
               maxH={"100%"}
-              alt=""
+              alt={alt}
             ></Image>
             <Box position={"absolute"} right={2} top={2}>
               <IconButton
@@ -108,7 +108,7 @@ export default function HobbyImage({
               w={"auto"}
               fit={"contain"}
               src={src}
-              alt="Zoomed In Image"
+              alt={`${alt} zoomed in`}
             ></Image>
           </ModalBody>
         </ModalContent>

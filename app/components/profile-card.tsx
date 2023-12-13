@@ -11,13 +11,8 @@ import {
   useClipboard,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
 import { HiMagnifyingGlass } from "react-icons/hi2";
-import {
-  MdContentCopy,
-  MdOutlineAlternateEmail,
-  MdOutlineSchool,
-} from "react-icons/md";
+import { MdOutlineAlternateEmail, MdOutlineSchool } from "react-icons/md";
 import { LuCopy, LuCopyCheck } from "react-icons/lu";
 
 import { TiLocationArrowOutline } from "react-icons/ti";
@@ -40,7 +35,7 @@ export default function ProfileCard() {
           Matthew McCracken
         </Text>
       </Box>
-      <Image src="./profile5x4.jpg" alt=""></Image>
+      <Image src="./profile5x4.jpg" alt="Profile Photo"></Image>
       <Flex
         alignItems="center"
         gap={4}
