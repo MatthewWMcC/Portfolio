@@ -21,7 +21,15 @@ import { FaGithub } from "react-icons/fa";
 import { LuLink } from "react-icons/lu";
 
 export default function Project(props: projectProps) {
-  const { title, description, image, languages, githubLink, liveLink } = props;
+  const {
+    title,
+    description,
+    image,
+    languages,
+    githubLink,
+    liveLink,
+    bg = "white",
+  } = props;
   return (
     <Flex
       direction="column"
@@ -31,11 +39,7 @@ export default function Project(props: projectProps) {
       overflow="hidden"
       flex="0 0 calc(50% - 12px)"
     >
-      <AspectRatio
-        ratio={1}
-        w="full"
-        bg={useColorModeValue("blue.200", "blue.300")}
-      >
+      <AspectRatio ratio={1} w="full" bg={bg}>
         <Image
           className="img-cover"
           src={image}
@@ -84,7 +88,11 @@ export default function Project(props: projectProps) {
         <Flex gap={2} flexWrap="wrap" maxW="100%">
           {languages.map((language) => {
             return (
-              <Badge key={language} colorScheme={languageColorMap[language]}>
+              <Badge
+                key={language}
+                colorScheme={languageColorMap[language]}
+                variant={"outline"}
+              >
                 {language}
               </Badge>
             );

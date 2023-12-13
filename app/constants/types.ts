@@ -15,7 +15,6 @@ export enum language {
   BOOT = "Bootstrap",
   REDUX = "Redux",
   WEBPACK = "Webpack",
-  PRISMA = "prisma",
   MONGO = "Mongo",
   NEXT = "Next.js",
   CHAKRA = "Chakra UI",
@@ -29,6 +28,7 @@ export interface projectProps {
   languages: language[];
   githubLink: string;
   liveLink?: string;
+  bg?: string;
 }
 
 export interface IImage {

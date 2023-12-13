@@ -5,7 +5,7 @@ export const languageColorMap: Record<language, string> = {
   [language.CSS]: "blue",
   [language.GCP]: "orange",
   [language.NODE]: "green",
-  [language.SOCKET]: "grey",
+  [language.SOCKET]: "gray",
   [language.TS]: "blue",
   [language.SASS]: "pink",
   [language.BOOT]: "purple",
@@ -14,7 +14,6 @@ export const languageColorMap: Record<language, string> = {
   [language.REACT]: "blue",
   [language.REDUX]: "purple",
   [language.WEBPACK]: "blue",
-  [language.PRISMA]: "grey",
   [language.MONGO]: "green",
   [language.NEXT]: "negative",
   [language.CHAKRA]: "teal",
@@ -38,6 +37,7 @@ export const projects: projectProps[] = [
     languages: [language.TS, language.SOCKET, language.GCP, language.REDUX],
     githubLink: "https://github.com/MatthewWMcC/GeoPro",
     liveLink: "https://geopro.herokuapp.com/",
+    bg: "gray.400",
   },
   {
     id: "voyager-view",
@@ -48,15 +48,17 @@ export const projects: projectProps[] = [
     languages: [language.SASS, language.NODE, language.WEBPACK],
     githubLink: "https://github.com/MatthewWMcC/Voyager-View",
     liveLink: "https://matthewwmcc.github.io/Voyager-View/",
+    bg: "white",
   },
   {
     id: "storytime",
     title: "StoryTime",
     description:
       "A MERN-stack application allowing users to track and share their reading habits. Users can share their thoughts on specific chapters and comment on on and like other users insights in real time.",
-    image: "./projects/storytime-logo.png",
+    image: "./projects/storytime-logo.svg",
     languages: [language.JS, language.REACT, language.BOOT, language.MONGO],
     githubLink: "https://github.com/MatthewWMcC/StoryTime",
+    bg: "teal.200",
   },
   {
     id: "personal-portfolio",
@@ -66,5 +68,6 @@ export const projects: projectProps[] = [
     image: "./images/portfolio-logo.svg",
     languages: [language.NEXT, language.CHAKRA, language.TS],
     githubLink: "https://github.com/MatthewWMcC/Portfolio",
+    bg: "blue.300",
   },
 ];

@@ -27,6 +27,7 @@ export default function Projects() {
             languages,
             githubLink,
             liveLink,
+            bg,
           }) => {
             return (
               <Project
@@ -38,6 +39,7 @@ export default function Projects() {
                 languages={languages}
                 githubLink={githubLink}
                 liveLink={liveLink}
+                bg={bg}
               ></Project>
             );
           }
