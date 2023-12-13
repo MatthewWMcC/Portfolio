@@ -4,12 +4,25 @@ import { Metadata } from "next";
 import theme from "./theme";
 import Head from "next/head";
 import NavBar from "./components/nav-bar";
-import Footer from "./components/footer";
 
 export const metadata: Metadata = {
   title: "Matthew McCracken - Portfolio",
   description:
     "Welcome to my website. This is the home of my Projects, Hobbies, and a place to show off my creativity.",
+  openGraph: {
+    url: "https://matthewwmcc.vercel.app/",
+    title: "Matthew McCracken - Portfolio",
+    description:
+      "Welcome to my website. This is the home of my Projects, Hobbies, and a place to show off my creativity.",
+    images: [
+      {
+        url: "/images/website-image-2.png",
+        width: 1220,
+        height: 864,
+        alt: "Matthew McCracken's Website",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -21,12 +34,6 @@ export default function RootLayout({
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Matthew McCracken - Portfolio" />
-        <meta
-          property="og:description"
-          content="Welcome to my website. This is the home of my Projects, Hobbies, and a place to show off my creativity."
-        />
-        <meta property="og:image" content={"/images/website-image.png"} />
         <link
           rel="icon"
           type="image/x-icon"
