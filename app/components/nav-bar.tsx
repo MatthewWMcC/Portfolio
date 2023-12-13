@@ -16,16 +16,28 @@ import {
   useDisclosure,
   useOutsideClick,
 } from "@chakra-ui/react";
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, useState } from "react";
 import IconSwitch from "./icon-switch";
 import { IoMoon, IoSunny } from "react-icons/io5";
 import { navLinks } from "../constants";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
+  const [showBorder, setShowBorder] = useState(false);
 
   const isLightMode = useMemo(() => colorMode === "light", [colorMode]);
+
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (height) => {
+    if (height > 10 && !showBorder) {
+      setShowBorder(true);
+    } else if (height < 10 && showBorder) {
+      setShowBorder(false);
+    }
+  });
 
   const ref = useRef(null);
   useOutsideClick({
@@ -59,10 +71,7 @@ export default function NavBar() {
 
   return (
     <Box
-      boxShadow={useColorModeValue(
-        "0px 2px 3px #2D3748",
-        "0px 2px 3px #b8c4e0"
-      )}
+      boxShadow={showBorder ? "0px 2px 3px #2D3748" : ""}
       bg={"inherit"}
       position="sticky"
       top={0}

@@ -9,7 +9,11 @@ import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <Container maxW="container.lg" padding={{ base: 6, sm: 8 }}>
+    <Container
+      maxW="container.lg"
+      p={{ base: 6, sm: 6 }}
+      pt={{ base: 0, sm: 0 }}
+    >
       <Landing />
       <Divider />
       <AboutMe />

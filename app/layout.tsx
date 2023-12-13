@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Welcome to my website. This is the home of my Projects, Hobbies, and a place to show off my creativity.",
     images: [
       {
-        url: "/images/website-image-2.png",
+        url: "/images/preview-image.png",
         width: 1220,
         height: 864,
         alt: "Matthew McCracken's Website",
