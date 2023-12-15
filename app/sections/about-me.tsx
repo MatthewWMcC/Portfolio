@@ -74,7 +74,7 @@ export default function AboutMe() {
               color={useColorModeValue("gray.600", "gray.400")}
             >
               {
-                "In my spare time, I enjoy Kayaking, Social Gaming, and learning about Geography and History. My hobbies inspire me to keep creating new online experiences where I can innovate, be creative, and bring people together."
+                "In my spare time, I enjoy Kayaking, Social Gaming, and learning about Geography and History. My hobbies inspire me to keep creating new online experiences where I can innovate, solve complex problems, and bring people together."
               }
             </Text>
           </Stack>
