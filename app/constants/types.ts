@@ -84,3 +84,12 @@ export enum AnswerState {
   CORRECT = "CORRECT",
   REVEAL = "REVEAL",
 }
+
+export interface IAchievement {
+  role: string;
+  title: string;
+  org: string;
+  award: string;
+  src: string;
+  href: string;
+}

@@ -3,6 +3,7 @@
 import {
   Box,
   Flex,
+  Icon,
   Link,
   Stack,
   Text,
@@ -11,6 +12,8 @@ import {
 import ProfileCard from "../components/profile-card";
 import Rating from "../components/rating";
 import ScrollTo from "../components/scroll-to";
+import Achievement from "../components/achievement";
+import { FaTrophy } from "react-icons/fa";
 
 export default function AboutMe() {
   return (
@@ -25,9 +28,12 @@ export default function AboutMe() {
         justify="space-evenly"
         direction={{ base: "column", md: "row" }}
         gap={6}
+        flexWrap={"wrap"}
       >
-        <ProfileCard />
-        <Stack minW={"3xs"} maxW={"sm"} gap={5}>
+        <Flex order={0}>
+          <ProfileCard />
+        </Flex>
+        <Stack minW={"3xs"} maxW={"sm"} gap={5} order={{ base: 2, md: 1 }}>
           <Stack>
             <Text fontSize={"xl"}>The Journey</Text>
             <Text
@@ -79,6 +85,43 @@ export default function AboutMe() {
             </Text>
           </Stack>
         </Stack>
+        <Flex
+          order={{ base: 1, md: 2 }}
+          flex={"0 0 100%"}
+          w={"100%"}
+          justify={"center"}
+          align={"center"}
+          direction={{ base: "column", md: "row" }}
+          gap={3}
+          maxW={{ base: "sm", md: "full" }}
+          mt={{ base: 0, md: 5 }}
+        >
+          <Icon as={FaTrophy} h={6} w={6} color={"yellow.500"} />
+          <Flex w={"full"} gap={6} direction={{ base: "column", md: "row" }}>
+            <Achievement
+              achievement={{
+                role: "Frontend Developer",
+                title: "COVID in Canada Tracker",
+                award: "AlphaStart Challenge Winner",
+                org: "DeltaHacks 7",
+                src: "/achievements/deltahacks-7.jpg",
+                href: "https://devpost.com/software/covid-canada-tracker",
+              }}
+            />
+            <Achievement
+              achievement={{
+                role: "Software Developer",
+                title: "SpaceNearby",
+                award: "Local Hackathon Winner/Global Nominee",
+                org: "NASA SpaceApps Challenge 2020",
+                src: "/achievements/spaceapps-logo.png",
+                href: "https://2020.spaceappschallenge.org/challenges/connect/space-exploration-your-backyard/teams/academic-honesty/project",
+              }}
+            />
+          </Flex>
+
+          <Icon as={FaTrophy} h={6} w={6} color={"yellow.500"} />
+        </Flex>
       </Flex>
     </Flex>
   );

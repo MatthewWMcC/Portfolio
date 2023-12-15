@@ -99,9 +99,7 @@ export default function Project(props: projectProps) {
           })}
         </Flex>
         <br></br>
-        <Text fontSize="xs" color="primary.800">
-          {description}
-        </Text>
+        <Text fontSize="xs">{description}</Text>
       </Box>
     </Flex>
   );
