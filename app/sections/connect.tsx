@@ -1,6 +1,21 @@
 "use client";
 
-import { Stack, Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Stack,
+  Flex,
+  Text,
+  useColorModeValue,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
+  IconButton,
+  Icon,
+  useClipboard,
+  useDisclosure,
+  Button,
+} from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
 import { RiMapPin2Line } from "react-icons/ri";
 import { GrUserManager } from "react-icons/gr";
@@ -9,8 +24,16 @@ import { SiGmail } from "react-icons/si";
 
 import LinkButton from "../components/link-button";
 import ScrollTo from "../components/scroll-to";
+import { LuCopy, LuCopyCheck } from "react-icons/lu";
 
 export default function Connect() {
+  const { onCopy, hasCopied } = useClipboard("+1 289 527 5108", 5000);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const handleOpen = () => {
+    onOpen();
+  };
+
   return (
     <Flex align="center" direction="column" minH={"300px"}>
       <ScrollTo id="Connect" />
@@ -36,12 +59,13 @@ export default function Connect() {
             href={"mailto:matthewwmccracken@gmail.com"}
             borderColor={useColorModeValue("outline.light", "outline.dark")}
           />
-          <LinkButton
-            text={"Phone"}
-            icon={FaPhone}
-            href={"tel:+12895275108"}
+          <Button
+            leftIcon={<Icon as={FaPhone} />}
             colorScheme={"cyan"}
-          />
+            onClick={handleOpen}
+          >
+            Phone
+          </Button>
           <LinkButton
             text={"Resume"}
             icon={GrUserManager}
@@ -72,6 +96,33 @@ export default function Connect() {
           />
         </Stack>
       </Flex>
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        motionPreset="slideInBottom"
+        size="xs"
+        isCentered={true}
+        allowPinchZoom={true}
+      >
+        <ModalOverlay />
+
+        <ModalContent alignContent={"center"} justifyContent={"center"}>
+          <ModalCloseButton />
+          <ModalBody>
+            <Flex justify={"center"} align={"center"}>
+              <IconButton
+                bg="transparent"
+                icon={
+                  <Icon as={hasCopied ? LuCopyCheck : LuCopy} h={5} w={5} />
+                }
+                aria-label="copy email to clipboard"
+                onClick={onCopy}
+              />
+              <Text>+1 289 527 5108</Text>
+            </Flex>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Flex>
   );
 }
