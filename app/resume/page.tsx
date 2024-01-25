@@ -9,7 +9,7 @@ export default function Page() {
         <chakra.iframe
           height={"100%"}
           width="100%"
-          src="https://drive.google.com/file/d/16o_sq1oC1ciTSg78loNWy6sdJqGUvfvR/preview?usp=sharing"
+          src="https://drive.google.com/file/d/1y_H_iFJPEwN9IOpnPMcGGPV99GL4JeBC/preview?usp=sharing"
         ></chakra.iframe>
       </Box>
     </>
