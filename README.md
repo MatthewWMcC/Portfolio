@@ -1,6 +1,7 @@
-# https://matthewwmcc.vercel.app/
-
 Personal website for Matthew McCracken
+
+Check it out at the link:
+# https://matthewwmcc.vercel.app/
 
 Created using Next.js and TypeScript with some styling help from Chakra UI and Framer Motion. Hosted with Vercel.
 
