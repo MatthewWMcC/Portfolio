@@ -22,6 +22,7 @@ import { LuLink } from "react-icons/lu";
 
 export default function Project(props: projectProps) {
   const {
+    id,
     title,
     description,
     image,
@@ -30,6 +31,8 @@ export default function Project(props: projectProps) {
     liveLink,
     bg = "white",
   } = props;
+
+  const border = useColorModeValue("outline.light", "outline.dark");
   return (
     <Flex
       direction="column"
@@ -56,6 +59,18 @@ export default function Project(props: projectProps) {
         <Flex justifyContent="space-between" align="center" pb={2}>
           <Text fontSize="xl">{title}</Text>
           <Flex gap={2}>
+            {id === "geopro" && (
+              <Flex
+                tabIndex={-1}
+                border={"1px solid"}
+                borderColor={border}
+                borderRadius={"md"}
+                alignItems={"center"}
+                p={2}
+              >
+                <Text fontSize={"sm"}> New Live Site Coming Soon!</Text>
+              </Flex>
+            )}
             <Link
               href={liveLink}
               rounded="md"
@@ -64,7 +79,6 @@ export default function Project(props: projectProps) {
             >
               <Button
                 leftIcon={<Icon as={LuLink} />}
-                w="100%"
                 tabIndex={-1}
                 border={"1px solid"}
                 borderColor={useColorModeValue("outline.light", "outline.dark")}

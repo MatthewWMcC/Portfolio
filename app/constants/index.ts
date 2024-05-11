@@ -36,7 +36,7 @@ export const projects: projectProps[] = [
     image: "./projects/geopro-logo.svg",
     languages: [language.TS, language.SOCKET, language.GCP, language.REDUX],
     githubLink: "https://github.com/MatthewWMcC/GeoPro",
-    liveLink: "https://geopro.herokuapp.com/",
+    // liveLink: "https://geopro.herokuapp.com/",
     bg: "green.700",
   },
   {

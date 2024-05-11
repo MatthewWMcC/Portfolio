@@ -1,12 +1,4 @@
-import {
-  Box,
-  Flex,
-  Icon,
-  Link,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import Divider from "./divider";
+import { Box, Flex, Link, Text } from "@chakra-ui/react";
 
 export default function Footer() {
   return (
@@ -31,10 +23,13 @@ export default function Footer() {
           </Link>
         </Text>
       </Box>
-      <Box textAlign={["center", "end"]}>
-        <Text>{"This site is a work in progress."}</Text>
+      <Flex
+        textAlign={["center", "end"]}
+        alignItems={"end"}
+        justifyContent={"center"}
+      >
         <Text>{"Created by Matthew McCracken."}</Text>
-      </Box>
+      </Flex>
     </Flex>
   );
 }

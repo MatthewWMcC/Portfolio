@@ -11,7 +11,7 @@ import {
   useClipboard,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { HiMagnifyingGlass } from "react-icons/hi2";
+import { HiOutlineBriefcase } from "react-icons/hi2";
 import { MdOutlineAlternateEmail, MdOutlineSchool } from "react-icons/md";
 import { LuCopy, LuCopyCheck } from "react-icons/lu";
 
@@ -44,9 +44,9 @@ export default function ProfileCard() {
         py={2}
         color={useColorModeValue("gray.100", "gray.800")}
       >
-        <Icon as={HiMagnifyingGlass} h={8} w={8} />
-        <Text fontSize={{ base: "sm", sm: "md" }}>
-          {"Seeking roles in Full-Stack and Frontend Development"}
+        <Icon as={HiOutlineBriefcase} h={8} w={8} />
+        <Text fontSize={{ base: "sm", sm: "md" }} fontWeight={"bold"}>
+          {"Software Developer @ Geotab"}
         </Text>
       </Flex>
       <Stack px={5} py={2}>
